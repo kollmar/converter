@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- when using the mode "code", it's important to specify charset utf-8 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <link href="node_modules/jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
+	<script src="node_modules/jsoneditor/dist/jsoneditor.min.js"></script>
+</head>
+
+<body>
+	<label for="jsonURL">URL der JSON-URL hinterlegen</label><br>
+	<input type="url" name="jsonURL" id="jsonURL"><br><br>
+	
+	<button type="submit" name="laden" id="laden">Laden</button>
+	
+	<div id="jsoneditor" style="width: 40%; height: 600px;"></div>
+
+	<script src="dist/js/jsonEditor.js"></script>
+	<script src="dist/js/findAndPlaceURL.js"></script>
+	<script src="dist/js/getNodes.js"></script>
+</body>
+
+</html>

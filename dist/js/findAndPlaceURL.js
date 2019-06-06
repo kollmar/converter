@@ -1,0 +1,37 @@
+window.onload = () => {
+
+	const readURL = (inputURL) => {
+		return console.log(inputURL);
+	}
+
+	// const ladenDerUrl = new Promise((resolve, reject) => {
+	// 	setTimeout(() => {
+	// 		resolve ? resolve(alert("rein geladen")) : reject(alert('falsche URL'));
+	// 	}, 1000);
+	// });
+
+	const getJSON = (url) => {
+		let baseUrl = window.location.origin;
+		console.log(baseUrl + "/converter/proxy.php?path=" + url);
+		fetch(baseUrl + "/converter/proxy.php?path=" + url)
+			.then(res => res.json())
+			.then((urlJsonData) => {
+				console.log(urlJsonData);
+				editor.update(urlJsonData);
+
+				json = editor.get();
+				getKeyNamesFromJson(json);
+			})
+			.catch(err => console.log(err));
+	}
+
+	document.getElementById('laden').onclick = () => {
+		let url = document.getElementById('jsonURL').value;
+
+		// readURL(url);
+
+		// ladenDerUrl(url).then(getJSON(url));
+		getJSON(url);		
+	}
+
+}

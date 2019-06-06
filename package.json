@@ -1,0 +1,14 @@
+{
+  "name": "converter",
+  "version": "1.0.0",
+  "description": "Converter for json and xml files, change nodenames, update existing feeds",
+  "main": "index.js",
+  "scripts": {
+    "test": "testing"
+  },
+  "author": "AK",
+  "license": "ISC",
+  "dependencies": {
+    "jsoneditor": "^5.33.0"
+  }
+}
