@@ -11,9 +11,11 @@
 
 <body>
 	<label for="jsonURL">URL der JSON-URL hinterlegen</label><br>
-	<input type="url" name="jsonURL" id="jsonURL"><br><br>
-	
+	<input type="url" name="jsonURL" id="jsonURL" value="https://relaxx.center/public/5d5e8dae93e645068eac6ffd39e8f55d/api/v1/posting.json"><br><br>	
 	<button type="submit" name="laden" id="laden">Laden</button>
+	<br><br>
+	<input type="text" name="jobFields" id="jobFields" value="hits.hits"><br><br>
+	<button type="submit" name="reload" id="reload">reload</button>
 	
 	<div id="jsoneditor" style="width: 40%; height: 600px;"></div>
 

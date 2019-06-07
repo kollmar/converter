@@ -4,12 +4,6 @@ window.onload = () => {
 		return console.log(inputURL);
 	}
 
-	// const ladenDerUrl = new Promise((resolve, reject) => {
-	// 	setTimeout(() => {
-	// 		resolve ? resolve(alert("rein geladen")) : reject(alert('falsche URL'));
-	// 	}, 1000);
-	// });
-
 	const getJSON = (url) => {
 		let baseUrl = window.location.origin;
 		console.log(baseUrl + "/converter/proxy.php?path=" + url);
@@ -32,6 +26,13 @@ window.onload = () => {
 
 		// ladenDerUrl(url).then(getJSON(url));
 		getJSON(url);		
+	}
+
+	document.getElementById('reload').onclick = () => {	
+		sumKeysNames = [];
+		specificJsonObj(editor.get(), document.getElementById('jobFields').value);
+		console.table(sumKeysNames);
+		editor.set(sumKeysNames);
 	}
 
 }

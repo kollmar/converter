@@ -1,27 +1,42 @@
-const getKeyNamesFromJson = (json) => {
+let sumKeysNames = [];
 
+const getKeyNamesFromJson = (json) => {
 	let getJsonKeyNames = Object.keys(json.hits.hits[0]._source);
 
-	// for (const name of getJsonKeyNames) {
-	// 	console.log("Name: " + name + " inhalt: " + getJsonKeyNames[name]);
-	// }
-
-	console.log(typeof json);
-	console.log(typeof getJsonKeyNames[0]);
-	console.table(JSON.stringify(getJsonKeyNames));
-	console.log(typeof JSON.stringify(json));
-
-	// console.log(JSON.stringify(json));
-
-	// checkAllKeysInJson(json);
+	checkAllKeysInJson(editor.get());
 }
 
-const checkAllKeysInJson = (json) => {
-	let sumJsonKeys = [];
-	let temp;
-	let checkedJSON = false;
-
+const checkAllKeysInJson = (jsonObj) => {
 	
+	if (jsonObj !== null && typeof jsonObj == "object") {
+		if (Array.isArray(jsonObj)) {
+			console.log(Object.values(jsonObj));
+		}
+		Object.entries(jsonObj).forEach(([key, value]) => {
+			// key ist entweder ein Array Index oder ein Objekt key
+			sumKeysNames.push(key);
+			// Rekursion -- Abfrage von weiteren Objekten innerhalb des Obejktes
+			checkAllKeysInJson(value);
+		});
+	} else {
+		// jsonObj ist number oder string
+		sumKeysNames.push[Object.keys(json)];
+	}	
+}
 
+const specificJsonObj = (jsonObj, jobFields) => {
+	
+	this.jsonObj = jsonObj;
+
+	if (jobFields !== "" && typeof jobFields !== "undefined") {
+		let arrJobFields = jobFields.split(".");
+
+		// TODO -> Automatisch abfragen
+		jsonObj = jsonObj[arrJobFields[0]][arrJobFields[1]][0];
+		
+		// alert(Object.entries(jsonObj));
+	}
+
+	checkAllKeysInJson(jsonObj);
 }
 
