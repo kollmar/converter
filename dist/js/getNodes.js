@@ -20,14 +20,12 @@ const checkAllKeysInJson = (jsonObj) => {
 		});
 	} else {
 		// jsonObj ist number oder string
-		sumKeysNames.push[Object.keys(json)];
+		// sumKeysNames.push[Object.keys(json)];
 	}	
 }
 
-const specificJsonObj = (jsonObj, jobFields) => {
+const specificJsonObj = (jsonObj, jobFields, bool) => {
 	
-	this.jsonObj = jsonObj;
-
 	if (jobFields !== "" && typeof jobFields !== "undefined") {
 		let arrJobFields = jobFields.split(".");
 

@@ -6,7 +6,7 @@ window.onload = () => {
 
 	const getJSON = (url) => {
 		let baseUrl = window.location.origin;
-		console.log(baseUrl + "/converter/proxy.php?path=" + url);
+		// console.log(baseUrl + "/converter/proxy.php?path=" + url);
 		fetch(baseUrl + "/converter/proxy.php?path=" + url)
 			.then(res => res.json())
 			.then((urlJsonData) => {
@@ -25,13 +25,13 @@ window.onload = () => {
 		// readURL(url);
 
 		// ladenDerUrl(url).then(getJSON(url));
-		getJSON(url);		
+		getJSON(url);
 	}
 
 	document.getElementById('reload').onclick = () => {	
 		sumKeysNames = [];
-		specificJsonObj(editor.get(), document.getElementById('jobFields').value);
-		console.table(sumKeysNames);
+		specificJsonObj(editor.get(), document.getElementById('jobFields').value, true);
+		// console.table(sumKeysNames);
 		editor.set(sumKeysNames);
 	}
 
