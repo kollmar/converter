@@ -8,13 +8,43 @@ const getKeyNamesFromJson = (json) => {
 
 const checkAllKeysInJson = (jsonObj) => {
 	
+	// if (jsonObj !== null && typeof jsonObj === "object") {
+	// 	Object.entries(jsonObj).forEach(([key, value]) => {
+	// 		this.key = key;
+	// 		this.value = value;
+
+	// 		let newObj = {};
+	// 		console.log("tet");
+	// 		typeof jsonObj[key] === 'object' ? () => {
+
+	// 			newObj[jsonObj[key]] = key;
+	// 			console.log(newObj[key]);
+	// 			sumKeysNames.push(newObj);
+	// 		} : sumKeysNames.push(key);
+	// 		checkAllKeysInJson(value);
+	// 	});
+	// }
+	// else {
+	// 	sumKeysNames.push("test: " + );
+	// }
+	
+
 	if (jsonObj !== null && typeof jsonObj == "object") {
 		if (Array.isArray(jsonObj)) {
-			console.log(Object.values(jsonObj));
+			// console.log(Object.values(jsonObj));
 		}
 		Object.entries(jsonObj).forEach(([key, value]) => {
-			// key ist entweder ein Array Index oder ein Objekt key
-			sumKeysNames.push(key);
+			// key ist entweder ein Array Index oder ein Objekt key	
+			if (value !== null && typeof value === "object") {
+				let newArrObj = [];
+				
+				Object.entries(value).forEach(([key, v]) => {
+					newArrObj.push(key);
+				});
+				sumKeysNames.push(newArrObj);
+			} else {				
+				sumKeysNames.push(key);
+			}		
 			// Rekursion -- Abfrage von weiteren Objekten innerhalb des Obejktes
 			checkAllKeysInJson(value);
 		});
@@ -24,7 +54,7 @@ const checkAllKeysInJson = (jsonObj) => {
 	}	
 }
 
-const specificJsonObj = (jsonObj, jobFields, bool) => {
+const specificJsonObj = (jsonObj, jobFields) => {
 	
 	if (jobFields !== "" && typeof jobFields !== "undefined") {
 		let arrJobFields = jobFields.split(".");

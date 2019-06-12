@@ -30,9 +30,8 @@ window.onload = () => {
 
 	document.getElementById('reload').onclick = () => {	
 		sumKeysNames = [];
-		specificJsonObj(editor.get(), document.getElementById('jobFields').value, true);
+		specificJsonObj(editor.get(), document.getElementById('jobFields').value);
 		// console.table(sumKeysNames);
-		editor.set(sumKeysNames);
+		editor.set(sumKeysNames);		
 	}
-
 }
