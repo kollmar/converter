@@ -2,33 +2,37 @@
 <html>
 
 <head>
-    <!-- when using the mode "code", it's important to specify charset utf-8 -->
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<!-- when using the mode "code", it's important to specify charset utf-8 -->
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-    <link href="node_modules/jsoneditor/dist/jsoneditor.css" rel="stylesheet" type="text/css">
+	<link href="node_modules/jsoneditor/dist/design.css" rel="stylesheet" type="text/css">
+	<link href="node_modules/jsoneditor/dist/jsoneditor.css" rel="stylesheet" type="text/css">
 	<script src="node_modules/jsoneditor/dist/jsoneditor.min.js"></script>
 	<script src="https://bgrins.github.io/filereader.js/filereader.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+	<script src="https://kit.fontawesome.com/db1ef3b8bd.js"></script>
 
 </head>
 
 <body>
 	<label for="jsonURL">URL der JSON-URL hinterlegen</label><br>
-	<input type="url" name="jsonURL" id="jsonURL" value="https://relaxx.center/public/5d5e8dae93e645068eac6ffd39e8f55d/api/v1/posting.json"><br><br>	
+	<input type="url" name="jsonURL" id="jsonURL"
+		value="https://relaxx.center/public/5d5e8dae93e645068eac6ffd39e8f55d/api/v1/posting.json"><br><br>
 	<button type="submit" name="laden" id="laden">Laden</button>
 	<br><br>
 	<input type="text" name="jobFields" id="jobFields" value="hits.hits"><br><br>
 	<button type="submit" name="reload" id="reload">reload</button>
-	
+
 	<div id="jsoneditor"></div>
-	<div class="right">				
+	<div class="right">
 		<p>
-		Load a JSON document: <input type="file" id="loadDocument" value="Load"/>
+			Load a JSON document: <input type="file" id="loadDocument" value="Load" />
 		</p>
 		<p>
 			Save a JSON document: <input type="button" id="saveDocument" value="Save" />
 		</p>
 	</div>
+	
 	<script src="dist/js/jsonEditor.js"></script>
 	<script src="dist/js/findAndPlaceURL.js"></script>
 	<script src="dist/js/getNodes.js"></script>
