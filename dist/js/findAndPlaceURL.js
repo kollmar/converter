@@ -14,24 +14,24 @@ window.onload = () => {
 				editor.update(urlJsonData);
 
 				json = editor.get();
-				getKeyNamesFromJson(json);
 			})
 			.catch(err => console.log(err));
 	}
 
 	document.getElementById('laden').onclick = () => {
 		let url = document.getElementById('jsonURL').value;
-
-		// readURL(url);
-
-		// ladenDerUrl(url).then(getJSON(url));
+		
 		getJSON(url);
 	}
 
-	document.getElementById('reload').onclick = () => {	
+	document.getElementById('reloadToList').onclick = () => {	
 		sumKeysNames = [];
-		specificJsonObj(editor.get(), document.getElementById('jobFields').value);
+		specificJsonObj(editor.get(), document.getElementById('jobFields').value, "list");
 		// console.table(sumKeysNames);
-		editor.set(sumKeysNames);		
+		editor.set(sumKeysNames);
+	}
+
+	document.getElementById('reloadToJSON').onclick = () => {
+		specificJsonObj(editor.get(), document.getElementById('jobFields').value, "json");	
 	}
 }
