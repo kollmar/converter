@@ -8,43 +8,13 @@ const getKeyNamesFromJson = (json) => {
 
 const checkAllKeysInJson = (jsonObj) => {
 	
-	// if (jsonObj !== null && typeof jsonObj === "object") {
-	// 	Object.entries(jsonObj).forEach(([key, value]) => {
-	// 		this.key = key;
-	// 		this.value = value;
-
-	// 		let newObj = {};
-	// 		console.log("tet");
-	// 		typeof jsonObj[key] === 'object' ? () => {
-
-	// 			newObj[jsonObj[key]] = key;
-	// 			console.log(newObj[key]);
-	// 			sumKeysNames.push(newObj);
-	// 		} : sumKeysNames.push(key);
-	// 		checkAllKeysInJson(value);
-	// 	});
-	// }
-	// else {
-	// 	sumKeysNames.push("test: " + );
-	// }
-	
-
 	if (jsonObj !== null && typeof jsonObj == "object") {
 		if (Array.isArray(jsonObj)) {
-			// console.log(Object.values(jsonObj));
+			console.log(Object.values(jsonObj));
 		}
 		Object.entries(jsonObj).forEach(([key, value]) => {
-			// key ist entweder ein Array Index oder ein Objekt key	
-			if (value !== null && typeof value === "object") {
-				let newArrObj = [];
-				
-				Object.entries(value).forEach(([key, v]) => {
-					newArrObj.push(key);
-				});
-				sumKeysNames.push(newArrObj);
-			} else {				
-				sumKeysNames.push(key);
-			}		
+			// key ist entweder ein Array Index oder ein Objekt key
+			sumKeysNames.push(key);
 			// Rekursion -- Abfrage von weiteren Objekten innerhalb des Obejktes
 			checkAllKeysInJson(value);
 		});
@@ -52,9 +22,21 @@ const checkAllKeysInJson = (jsonObj) => {
 		// jsonObj ist number oder string
 		// sumKeysNames.push[Object.keys(json)];
 	}	
+	// let newArrObj = [];
+	// Object.entries(jsonObj).forEach(([key, value]) => {
+	// 	if (value !== null && typeof value == "object") {			
+	// 		newArrObj.push(key);
+	// 		// newArrObj.push(value);
+	// 		// sumKeysNames.push(newArrObj);
+
+	// 		console.log(newArrObj);
+	// 	} else {
+	// 		sumKeysNames.push(key);
+	// 	}
+	// });
 }
 
-const specificJsonObj = (jsonObj, jobFields) => {
+const specificJsonObj = (jsonObj, jobFields, typeOfView) => {
 	
 	if (jobFields !== "" && typeof jobFields !== "undefined") {
 		let arrJobFields = jobFields.split(".");
@@ -62,9 +44,9 @@ const specificJsonObj = (jsonObj, jobFields) => {
 		// TODO -> Automatisch abfragen
 		jsonObj = jsonObj[arrJobFields[0]][arrJobFields[1]][0];
 		
-		// alert(Object.entries(jsonObj));
+		// alert(Object.entries(jsonObj));	
 	}
 
-	checkAllKeysInJson(jsonObj);
+	typeOfView === "list" ? checkAllKeysInJson(jsonObj) : editor.set(jsonObj);
 }
 
