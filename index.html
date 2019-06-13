@@ -18,21 +18,30 @@
 	<button type="submit" name="laden" id="laden">Laden</button>
 	<br><br>
 	<input type="text" name="jobFields" id="jobFields" value="hits.hits"><br><br>
-	<button type="submit" name="reload" id="reload">reload</button>
+	<button type="submit" name="reloadToList" id="reloadToList">reload als Liste</button>
+	<button type="submit" name="reloadToObj" id="reloadToJSON">reload als JSON</button>
 	
-	<div id="jsoneditor"></div>
-	<div class="right">				
+	<div id="jsoneditor" style="width: 40%;
+    height: 600px;
+    /* margin: 0 auto; */
+    display: inline-block;"></div>
+	<div id="jsoneditor2" style="    width: 40%;
+    display: inline-block;
+    height: 600px;"></div>
+
+	<div class="right">
 		<p>
-		Load a JSON document: <input type="file" id="loadDocument" value="Load"/>
+		Load a JSON document: <input type="file" id="loadDocument" value="Loads"/>
 		</p>
 		<p>
 			Save a JSON document: <input type="button" id="saveDocument" value="Save" />
 		</p>
 	</div>
-	<script src="dist/js/jsonEditor.js"></script>
 	<script src="dist/js/findAndPlaceURL.js"></script>
 	<script src="dist/js/getNodes.js"></script>
 	<script src="dist/js/load_and_save.js"></script>
+	<script src="dist/js/jsonEditor.js"></script>
+	<script src="dist/js/mapping.js"></script>
 </body>
 
 </html>
