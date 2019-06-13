@@ -3,7 +3,7 @@ FileReaderJS.setupInput(document.getElementById('loadDocument'), {
     readAsDefault: 'Text',
     on: {
       load: function (event, file) {
-        editor.setText(event.target.result);
+        editor2.setText(event.target.result);
       }
     }
   });
