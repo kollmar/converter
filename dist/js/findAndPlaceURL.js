@@ -1,5 +1,7 @@
 window.onload = () => {
 
+	"use strict";
+	
 	const readURL = (inputURL) => {
 		return console.log(inputURL);
 	}

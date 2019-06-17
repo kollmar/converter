@@ -1,4 +1,5 @@
-    // create the editor
+"use strict";
+	// create the editor
     var container,
     	container2,
     	options,
@@ -25,7 +26,7 @@
     json = {
     	"Array": [1, 2, 3],
     	"Boolean": true,
-    	"Null": null,
+    	"Null": "notNull (kurz)",
     	"Number": 123,
     	"Object": {
     		"a": "b",
@@ -39,7 +40,7 @@
     	fetch("/converter/test_relaxx_json.json")
     	.then(res => res.json())
 		.then((urlJsonData) => {
-			editor.set(urlJsonData);
+			editor.update(urlJsonData);
     	})
 		.catch(err => console.log(err));
 	};
