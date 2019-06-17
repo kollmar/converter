@@ -26,9 +26,9 @@
     json = {
     	"Array": [1, 2, 3],
     	"Boolean": true,
-    	"Null": "notNull (kurz)",
+    	"Null": "it.took",
     	"Number": 123,
-    	"Object": {
+    	"jobs": {
     		"a": "b",
     		"c": "d"
     	},
