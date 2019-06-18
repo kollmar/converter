@@ -26,7 +26,7 @@
     json = {
     	"Array": [1, 2, 3],
     	"Boolean": true,
-    	"Null": "it.took",
+    	"Null": "it._shards.skipped",
     	"Number": 123,
     	"jobs": {
     		"a": "b",
