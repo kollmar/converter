@@ -1,3 +1,4 @@
+"use strict";
 let sumKeysNames = [];
 
 const getKeyNamesFromJson = (json) => {
@@ -20,23 +21,33 @@ const checkAllKeysInJson = (jsonObj) => {
 		});
 	} else {
 		// jsonObj ist number oder string
-		sumKeysNames.push[Object.keys(json)];
+		// sumKeysNames.push[Object.keys(json)];
 	}	
+	// let newArrObj = [];
+	// Object.entries(jsonObj).forEach(([key, value]) => {
+	// 	if (value !== null && typeof value == "object") {			
+	// 		newArrObj.push(key);
+	// 		// newArrObj.push(value);
+	// 		// sumKeysNames.push(newArrObj);
+
+	// 		console.log(newArrObj);
+	// 	} else {
+	// 		sumKeysNames.push(key);
+	// 	}
+	// });
 }
 
-const specificJsonObj = (jsonObj, jobFields) => {
+const specificJsonObj = (jsonObj, jobFields, typeOfView) => {
 	
-	this.jsonObj = jsonObj;
-
 	if (jobFields !== "" && typeof jobFields !== "undefined") {
 		let arrJobFields = jobFields.split(".");
 
 		// TODO -> Automatisch abfragen
 		jsonObj = jsonObj[arrJobFields[0]][arrJobFields[1]][0];
 		
-		// alert(Object.entries(jsonObj));
+		// alert(Object.entries(jsonObj));	
 	}
 
-	checkAllKeysInJson(jsonObj);
+	typeOfView === "list" ? checkAllKeysInJson(jsonObj) : editor.set(jsonObj);
 }
 
