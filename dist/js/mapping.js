@@ -33,36 +33,41 @@ const mapFields = {
 
 			if (content !== null && typeof content !== 'object' && !Array.isArray(content)) {
 				let checkContent = content.toString().match(/(it.)[^+]*/gi);
-				if(checkContent !== null) {
+				if (checkContent !== null) {
 					arrList = checkContent;
 					if (Array.isArray(arrList) && arrList.length) {
-						jsonValues[key] = mapFields.mapNewValue(arrList);
-	
+						let chainContent = "";
+						for (let i = 0; i < arrList.length; i++) {
+							chainContent += mapFields.mapNewValue.json(arrList[i]);
+						}
+						jsonValues[key] = chainContent;
+
 						boolFieldMapping = true;
 					}
-				}				
+				}
 			}
 		});
 		(boolFieldMapping === true) ? editor2.update(jsonValues): alert("Keine Felder gemappt!");
 
 	},
-	"mapNewValue": (searchingField) => {
-		let contentLeft = mapFields.getJsons.editor();
-		let newContent = "";
-		let searchField = searchingField.map(value => value.substring(3, value.length).trim());
-		searchField = searchField[0].split(".");
-		console.log(searchField);
-		for (let i = 0; i < searchField.length; i++) {
-			if (newContent === "") {
-				newContent = contentLeft[searchField[i]];
-				if(searchField.length === 1){
-					return newContent;
-				}
-			} else {
-				if (!(i === searchField.length - 1)) {
-					newContent = newContent[searchField[i]];
+	"mapNewValue": {
+		"json": (searchingField) => {
+			let contentLeft = mapFields.getJsons.editor();
+			let newContent = "";
+			let searchField = searchingField.substring(3, searchingField.length).trim();
+			searchField = searchField.split(".");
+			for (let i = 0; i < searchField.length; i++) {
+				if (newContent === "") {
+					newContent = contentLeft[searchField[i]];
+					if (searchField.length === 1) {
+						return newContent;
+					}
 				} else {
-					return newContent = newContent[searchField[i]];
+					if (!(i === searchField.length - 1)) {
+						newContent = newContent[searchField[i]];
+					} else {
+						return newContent = newContent[searchField[i]];
+					}
 				}
 			}
 		}
