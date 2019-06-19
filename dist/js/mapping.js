@@ -102,26 +102,30 @@ const mapFields = {
 
 		},
 		"array" : (field, jsonValues, key) => {
-			console.log(field);
+			let checkContent;
 			let arrList;
 			if(Array.isArray(field)){
 				let temp ="";
 				for (let j = 0; j < field.length; j++) {
-					console.log(field[j]);
-					let checkContent = field[j].toString().match(/(it.)[^+]*/gi);
-					if (checkContent !== null) {
-						arrList = checkContent;
-						if (Array.isArray(arrList) && arrList.length) {
-							let chainContent = "";
-							for (let i = 0; i < arrList.length; i++) {
-								chainContent += mapFields.mapNewValue.json(arrList[i]);
+					if(Array.isArray(field[j])){
+						mapFields.checkTypeOfFields.array(field[j],jsonValues[key],j);
+					}
+					else {
+						let checkContent = field[j].toString().match(/(it.)[^+]*/gi);
+						if (checkContent !== null) {
+							arrList = checkContent;
+							if (Array.isArray(arrList) && arrList.length) {
+								let chainContent = "";
+								for (let i = 0; i < arrList.length; i++) {
+									chainContent += mapFields.mapNewValue.json(arrList[i]);
+								}
+								jsonValues[key][j] = chainContent;
+	
 							}
-							jsonValues[key][j] = chainContent;
-
-							return true;
 						}
 					}
 				}
+				return true;
 			}
 		}
 	},
