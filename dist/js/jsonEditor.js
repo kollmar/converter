@@ -24,16 +24,26 @@
 
     // set json
     json = {
-    	"Array": [1, 2, 3],
-    	"Boolean": true,
-    	"Null": "it._shards.skipped",
-    	"Number": 123,
-    	"jobs": {
-    		"a": "b",
-    		"c": "d"
-    	},
-    	"String": "Hello World"
-    };
+		"Array": [
+		  [
+			[
+			  "took"
+			],
+			"it.took"
+		  ],
+		  "5",
+		  2,
+		  3
+		],
+		"Boolean": true,
+		"Null": "it._shards.skipped",
+		"Number": 123,
+		"jobs": {
+		  "a": "b",
+		  "c": "d"
+		},
+		"String": "Hello World"
+	  };
 
     const jsonDummy = () => {
 
