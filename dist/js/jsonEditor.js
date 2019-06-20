@@ -25,7 +25,7 @@ editor2 = new JSONEditor(container2, options);
 json = {
 	"Array": [
 		"it.took",
-		"it.timed_ou",
+		"it.timed_out",
 		[
 			"it._shards.skipped",
 			2,
@@ -59,9 +59,17 @@ json = {
 	"Number": 123,
 	"jobs": {
 		"a": "b",
-		"c": "d"
+		"test": ["it.took"],
+		"c": {
+			"a": "b",
+			"c": "d"
+		},
+		"d": {
+			"a": "b",
+			"c": "d"
+		}
 	},
-	"String": "Hello World"
+	"String": "it.hits.hits._source.location.city"
 };
 
 const jsonDummy = () => {
