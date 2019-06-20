@@ -24,7 +24,7 @@ editor2 = new JSONEditor(container2, options);
 // set json
 json = {
 	"Array": [
-		"it.took", 
+		"it.took",
 		"it.timed_ou",
 		[
 			"it._shards.skipped",
@@ -68,11 +68,20 @@ const jsonDummy = () => {
 
 	// fetch("/converter/test_relaxx_json.json")
 	fetch("http://localhost:8080/test_relaxx_json.json")
-		.then(res => res.json())
-		.then((urlJsonData) => {
-			editor.update(urlJsonData);
-		})
-		.catch(err => console.log(err));
+	.then(res => res.json())
+	.then((urlJsonData) => {
+		editor.update(urlJsonData);
+	})
+	.catch((err) => {
+		console.log(err);
+			fetch("/converter/test_relaxx_json.json")
+			// fetch("http://localhost:8080/test_relaxx_json.json")
+			.then(res => res.json())
+			.then((urlJsonData) => {
+				editor.update(urlJsonData);
+			})
+			.catch(err => console.log(err));
+		});
 };
 
 jsonDummy();
