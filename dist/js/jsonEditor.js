@@ -24,42 +24,42 @@ editor2 = new JSONEditor(container2, options);
 // set json
 json = {
 	"Array": [
-		"it.took",
-		"it.timed_out",
+		"took",
+		"timed_out",
 		[
-			"it._shards.skipped",
+			"_shards.skipped",
 			2,
 			[
-				"it._shards.skipped",
+				"_shards.skipped",
 				[
-					"it._shards.skipped",
-					"it.hits.max_score",
-					"it.took"
+					"_shards.skipped",
+					"hits.max_score",
+					"took"
 				],
 				[
-					"it._shards.skipped",
+					"_shards.skipped",
 					2,
 					[
-						"it._shards.skipped",
+						"_shards.skipped",
 						[
-							"it._shards.skipped",
+							"_shards.skipped",
 							2,
 							3
 						],
-						"it.hits.max_score"
+						"hits.max_score"
 					]
 				],
 				2
 			]
 		],
-		"it._shards.skipped"
+		"_shards.skipped"
 	],
 	"Boolean": true,
-	"Null": "it._shards.skipped",
+	"Null": "_shards.skipped",
 	"Number": 123,
 	"jobs": {
 		"a": "b",
-		"test": ["it.took"],
+		"test": ["took"],
 		"c": {
 			"a": "b",
 			"c": "d"
@@ -69,7 +69,15 @@ json = {
 			"c": "d"
 		}
 	},
-	"String": "it.hits.hits._source.location.city"
+	"String": "hits.hits._source.location.city",
+	"jobs": {
+		"job": [{
+			"Stellentitel": "it._source.name_fulltext",
+			"city": "it._source.location.city",
+			"zip": "it._source.location.zip"
+		}
+		]
+	}
 };
 
 const jsonDummy = () => {

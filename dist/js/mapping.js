@@ -48,7 +48,7 @@ const mapFields = {
 		"normalFields" : (field, jsonValues, key) => {
 			let arrList;
 			if (field !== null && typeof field !== 'object' && !Array.isArray(field)) {
-				let checkContent = field.toString().match(/(it.)[^+]*/gi);
+				let checkContent = field.toString().match(/(it\.)[^+]*/gi);
 				if (checkContent !== null) {
 					arrList = checkContent;
 					if (Array.isArray(arrList) && arrList.length) {
@@ -98,7 +98,7 @@ const mapFields = {
 						if (typeof field[j] === "object" && !Array.isArray(field[j])){
 							mapFields.checkTypeOfFields.object(field[j],jsonValues[key],j);
 						} else {
-							let checkContent = field[j].toString().match(/(it.)[^+]*/gi);
+							let checkContent = field[j].toString().match(/(it\.)[^+]*/gi);
 							if (checkContent !== null) {
 								arrList = checkContent;
 								if (Array.isArray(arrList) && arrList.length) {
@@ -134,16 +134,26 @@ const mapFields = {
 				} else {
 					if (!(i === searchField.length - 1)) {
 						newContent = newContent[searchField[i]];
-						console.log(searchField[i]);
-						console.log(newContent);
 						if (Array.isArray(newContent)) {
-							for (let j = 0; j < newContent.length; j++) {
+							let tempLength = newContent.length;
+							let tempContent = [];
+							for (let j = 0; j < tempLength; j++) {
+
 								if (newContent[j].hasOwnProperty(searchField[i+1])){
-									newContent = newContent[j];
-								}
-								else{
+									tempContent.push(newContent[j]);
+								} else {
 									console.log("Array " + j + " von " + searchField[i] + " - Feld (" + searchField[i+1] + ") nicht gefunden");
 								}
+							}
+							if(tempContent.length === 1 && i+1 !== searchField.length -1) {
+								newContent = tempContent[0];
+							}
+							else {
+								newContent = "";
+								tempContent.forEach((value) => {
+									newContent += value[searchField[i+1]] + ", ";
+								});
+								return newContent.substring(0,newContent.length-2);  //substring entfernt letztes Komma
 							}
 						}
 					} else {
@@ -153,7 +163,17 @@ const mapFields = {
 			}
 		}
 	},
-	"goThroughObject": (objContent, objName) => {
+	"getDummyFromMapping": () => {
+		let getArray = prompt("In welcher Ebene befindet sich die Liste?").split(".");
+		let json = mapFields.getJsons.editor2();
+		return json[getArray[0]][getArray[1]][0];
+	},
+	"goThroughAllObjects": () => {
+		let contentFromJson = mapFields.getJsons.editor();
 
+		let getArrayFromJson = document.getElementById('jobFields').value;
+
+		let allJobs = contentFromJson[getArrayFromJson[0]][getArrayFromJson[1]];
+		console.log(allJobs);
 	}
 }
