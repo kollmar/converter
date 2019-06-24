@@ -11,8 +11,6 @@
       "total": 1,
       "max_score": 5,
       "hits": [
-        {"test":"foobar"},
-        {"test":"foo"},
         {
           "_index": "kcenter_public-postings_v4",
           "_type": "posting",
