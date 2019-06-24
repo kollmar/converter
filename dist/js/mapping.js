@@ -25,10 +25,43 @@ const mapFields = {
 			return editor2.update(jsonObj);
 		}
 	},
+	"getCountedJobs": () => {
+		let contentLeft = mapFields.getJsons.editor();		
+
+		let getArrayOfJobs = document.getElementById('jobFields').value;
+
+		getArrayOfJobs = getArrayOfJobs.split('.');
+
+		getArrayOfJobs.forEach((value) => {
+			contentLeft = contentLeft[value];
+		});
+
+		return contentLeft.length;
+	},
+	"addJobsToDummy": (_counter) => {
+		let counter = _counter;
+		let contentRight = mapFields.getJsons.editor2();
+		let contentRightObject = mapFields.getDummyFromMapping();
+		let countDummy = contentRight['jobs']['job'].length;
+		
+		if (countDummy !== counter) {
+			for (let i = 1; i < counter; i++) {
+				contentRight['jobs']['job'].push(contentRightObject);
+			}
+			mapFields.updateJsons.editor2(contentRight);
+		}
+		return contentRight;
+	},
 	"changeContent": () => {
-		let contentLeft = mapFields.getJsons.editor();
+		// let contentLeft = mapFields.getJsons.editor();
 		let contentRight = mapFields.getJsons.editor2();
 
+		let newContent = mapFields.addJobsToDummy(mapFields.getCountedJobs());
+		// console.log(newContent);
+		for (let i = 0; i < newContent['jobs']['job'].length; i++) {
+			// mapFields.lookingForRelaxxFields(newContent['jobs']['job'][i]);
+			console.log(newContent['jobs']['job'][i]);
+		}
 		mapFields.lookingForRelaxxFields(contentRight);
 	},
 	"getChanges": () => {
@@ -42,7 +75,7 @@ const mapFields = {
 			mapFields.checkTypeOfFields.array(content,jsonValues, key) ||
 			mapFields.checkTypeOfFields.object(content,jsonValues, key) ? boolFieldMapping = true : 0;
 		});
-		(boolFieldMapping === true) ? mapFields.updateJsons.editor2(jsonValues): alert("Keine Felder gemappt!");
+		(boolFieldMapping === true) ? mapFields.updateJsons.editor2(jsonValues) : alert("Keine Felder gemappt!");
 	},
 	"checkTypeOfFields": {
 		"normalFields" : (field, jsonValues, key) => {
