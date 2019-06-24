@@ -36,4 +36,11 @@ window.onload = () => {
 	document.getElementById('reloadToJSON').onclick = () => {
 		specificJsonObj(editor.get(), document.getElementById('jobFields').value, "json");	
 	}
+	document.getElementById('getDummyMapping').onclick = () => {
+		console.log(mapFields.getDummyFromMapping());
+	}
+	document.getElementById('jsoneditor').ondblclick = () => {
+		console.log(mapFields.getCountedJobs());
+		mapFields.addJobsToDummy(mapFields.getCountedJobs());
+	}
 }
