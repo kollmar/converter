@@ -27,8 +27,660 @@
               "id": 90,
               "canonicalName": "kcenter.jobmanager.OrderChannel"
             },
-            "releaseDateEnd": "2019-08-09T22:00:00Z",
-            "name_fulltext": "Leitstandfahrer / Kraftwerker (m/w/d)",
+            "releaseDateEnd": "001 -- 2019-08-09T22:00:00Z",
+            "name_fulltext": "001 --- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "lastUpdated": null,
+            "postingId": 70735,
+            "dynamicContent": {
+              "firmenkontakt": {
+                "value": "<p class=\"txt_grey_bold_footer\">Progroup AG</p><p class=\"txt_grey_footer\">Horstring 12, 76829 Landau</p><p class=\"txt_grey_footer\"><a href=\"https://relaxx.center/r/4b462aece663485e91ce5eaea12da983?pid=70735&mpid=26021&prid=16040&tid=4\">bewerbung@progroup.ag</a><br><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\">www.progroup.ag</a></p><p><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\"><img src=\"/api/v1/upload/serve/79075.png\" class=\"logo\" data-ker-id=\"logo\" data-ker=\"image\" alt=\"\"></a></p>"
+              },
+              "titel": {
+                "hidden": false,
+                "value": "<p><strong>Leitstandfahrer / Kraftwerker (m/w/d)</strong></p>"
+              },
+              "wir_bieten": {
+                "value": "<p>Progroup bietet Aufgaben und Entwicklungsperspektiven f&uuml;r leistungsstarke Mitarbeiter, die sich in einem familiengef&uuml;hrten Unternehmen gemeinschaftlich und l&ouml;sungsorientiert neuen Herausforderungen stellen und die Zukunft gestalten wollen. Wir sch&auml;tzen Engagement und Leistungsbereitschaft, honorieren Erfolg und f&ouml;rdern teamorientierte und durchsetzungsstarke Talente. Wir sind gespannt auf Ihre Bewerbung. Bitte bewerben Sie sich unter Angabe der Kennziffer, Ihres n&auml;chstm&ouml;glichen Eintrittstermins und Ihrer Gehaltsvorstellung vorzugsweise online &uuml;ber unsere Website: <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>"
+              },
+              "titel_einleitung": {
+                "value": "<p class=\"txt_bold\">Zur Verst&auml;rkung am Standort <span class=\"txt_color\"> Eisenh&uuml;ttenstadt</span> suchen wir schnellstm&ouml;glich einen</p>\n"
+              },
+              "profil": {
+                "value": "<ul>\n\t<li>Abgeschlossene Berufsausbildung in einem metallverarbeitenden oder elektronischen Beruf, alternativ Berufserfahrung im Bereich der Leitstandt&auml;tigkeit</li>\n\t<li>Gepr&uuml;fter Kesselw&auml;rter (m/w/d)</li>\n\t<li>Ausbildung zum gepr&uuml;ften Kraftwerker (m/w/d) (w&uuml;nschenswert)</li>\n\t<li>Erlaubnisschein zum Fahren von Gabelstaplern und Br&uuml;ckenkranen (w&uuml;nschens&shy;wert)</li>\n\t<li>Berufserfahrung im Schichtbetrieb einer Abfallverbrennungsanlage, eines Kraft&shy;werkes, einer komplexen verfahrenstechnischen Anlage oder im Ver- und Entsorgungsbereich</li>\n\t<li>Verst&auml;ndnis f&uuml;r produktionstechnische und verfahrenstechnische Zusammen&shy;h&auml;nge</li>\n\t<li>Bereitschaft sowie Eignung zum Einsatz im Wechselschichtdienst</li>\n\t<li>Sehr gute PC-Kenntnisse (MS Office etc.)</li>\n\t<li>Hohes Verantwortungs- und Sicherheitsbewusstsein</li>\n\t<li>Eigeninitiative sowie hohe Lernbereitschaft</li>\n\t<li>Freude am Arbeiten in einem erfolgreichen Team</li>\n\t<li>Verantwortungsbewusstes und selbstst&auml;ndiges Arbeiten sowie Teamf&auml;higkeit</li>\n</ul>\n"
+              },
+              "label_u_beschreibung": {
+                "hidden": false,
+                "value": "BAUEN SIE MIT UNS ZUKUNFT"
+              },
+              "titel_zusatztext": {
+                "hidden": false,
+                "value": "<p class=\"txt_grey_bold\">Kennziffer 2019-97</p>\n\n<p class=\"txt_grey\">N&auml;here Informationen zur Stelle erhalten Sie &uuml;ber unsere Webseite <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>\n"
+              },
+              "label_profil": {
+                "value": "Ihr Profil"
+              },
+              "u_beschreibung": {
+                "value": "<p>Progroup ist das f&uuml;hrende Unternehmen in der Wellpappenrohpapier- und Well&shy;pappindustrie in Europa. Was uns auszeichnet: Innovationskraft, Effizienz und Zu&shy;verl&auml;ssigkeit. So helfen wir unabh&auml;ngigen Verpackungsherstellern profitabel zu wachsen. Damit wir weiter erfolgreich auf Kurs bleiben, brauchen wir Sie!</p>\n"
+              },
+              "aufgaben": {
+                "value": "<ul><li>&Uuml;berwachung, Kontrolle, Betreuung und Bedienung der Anlagenkomponenten</li><li>Durchf&uuml;hren von An- und Abfahrvorg&auml;ngen</li><li>Anpassen von Leistung und Betriebsweise der Anlagen an den Bedarf und nach den Anforderungen der Papiermaschine innerhalb der vorgegebenen Grenzen</li><li>EBS-Krananlage bedienen</li><li>Erkennen und sofortiges reagieren bei kritischen Betriebszust&auml;nden</li><li>St&ouml;rungserkennung und Weiterbearbeitung mit dem Ziel des sicheren Betriebs&shy;ablaufs</li><li>Freischaltvorg&auml;nge und Inbetriebnahmen durchf&uuml;hren</li><li>&Uuml;berwachung und Einhaltung der Emissionsdaten</li><li>Dokumentation der Vorg&auml;nge der Schicht, insbesondere aller besonderen Vor&shy;kommnisse, Abweichungen vom Normalbetrieb und St&ouml;rungsmeldungen im Schichtbuch Leitstand</li><li>Kommunikation mit dem Schichtpersonal in allen Fragen des Anlagenbetriebs</li><li>Einhaltung der Vorgaben des Schichtleiters, insbesondere f&uuml;r die genehmigungs&shy;konforme Fahrweise der Anlagen</li><li>Umfassende sach- und termingerechte Information des Schichtleiters und der nachfolgenden Schichtf&uuml;hrer hinsichtlich erkannter M&auml;ngel, Abweichungen vom Normalbetrieb und Optimierungsm&ouml;glichkeiten</li></ul>"
+              },
+              "label_aufgaben": {
+                "value": "Ihre Aufgaben"
+              }
+            },
+            "nameFirst_fulltext": null,
+            "dateCreated": 1559910815000,
+            "jobFields": [
+              {
+                "name": "Technische Berufe",
+                "id": 53
+              }
+            ],
+            "liquidDesign": {
+              "liquid_design_ueberschriften_farbe": "#e20065",
+              "liquid_design_hintergrundfarbe": "#FFFFFF",
+              "liquid_design": "Ja",
+              "liquid_design_headerbild": "https://files.relaxx.center/kcenter-uploads/kc-01d34817a27286593cdbde0d8a93ca1c31623fd8427e8b008f989e6674ae2e11/step_header1.jpg"
+            },
+            "jobCategories": [],
+            "client": {
+              "name": "Progroup AG",
+              "logo": "/api/v1/upload/serve/172725.png",
+              "id": 51,
+              "nameShort": null
+            },
+            "logo": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/logo_treffer.png",
+            "tenant": {
+              "phoneNumber": "+49 69 4500972-0",
+              "name": "KJO-Frankfurt",
+              "id": 4,
+              "nameShort": "KJO-F",
+              "canonicalName": "kcenter.Tenant"
+            },
+            "canonicalName": "kcenter.jobmanager.Job",
+            "releaseDateBegin": "2019-06-10T22:00:00Z",
+            "identifier": null,
+            "product": {
+              "name": "stepstone.de / Professional / 60 Tage, Standard-Unternehmensprofil, Boost, 3 Refresh",
+              "productGroupId": 773,
+              "contractNumber": "diverse",
+              "runtime": 60,
+              "id": 16040,
+              "canonicalName": "kcenter.Product"
+            },
+            "employmentType": "Vollzeit",
+            "geopoint": [
+              {
+                "lon": "14.6519191",
+                "lat": "52.1477119"
+              }
+            ],
+            "metaFields": {
+              "hintData": {},
+              "contactInfoJson": {
+                "website": "https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4",
+                "facebookUrl": null,
+                "xingUrl": null,
+                "linkedInUrl": null,
+                "youtubeUrl": null,
+                "kununuUrl": null,
+                "careerUrl": null,
+                "email": "info@progroup.ag"
+              },
+              "customFields": {}
+            },
+            "jobHtmlUrl": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/19jo_57107.htm",
+            "titleTag": "Progroup AG -- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "version": null,
+            "url": "https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4",
+            "systemStatus": 0,
+            "name": "Leitstandfahrer / Kraftwerker (m/w/d)",
+            "location": [
+              {
+                "zip": "15890",
+                "country": "Deutschland",
+                "city": "Eisenhüttenstadt",
+                "street": "Oderlandstraße 110",
+                "geopoint": {
+                  "lon": "14.6519191",
+                  "lat": "52.1477119"
+                },
+                "region": "Brandenburg"
+              },
+              {
+                "zip": "666",
+                "country": "Deutschland",
+                "city": "Teufelheim",
+                "street": "TEST 666",
+                "geopoint": {
+                  "lon": "6",
+                  "lat": "66"
+                },
+                "region": "Baden-Württemberg"
+              },
+              {
+                "zip": "76646",
+                "country": "Deutschland",
+                "city": "Bruchsal",
+                "street": "TEST 110",
+                "geopoint": {
+                  "lon": "11",
+                  "lat": "50"
+                },
+                "region": "Baden-Württemberg"
+              }
+            ],
+            "status": 4
+          }
+        },
+        {
+          "_index": "kcenter_public-postings_v4",
+          "_type": "posting",
+          "_id": "70735",
+          "_score": 5,
+          "_source": {
+            "orderNumber": "19jo_57107",
+            "keywords": "Kraftwerkmeister, Techniker, Betriebstechniker, Elektrotechnikmeister, Mechatroniker, Mechaniker, Betriebsschlosser",
+            "trackingUrl": "https://relaxx.center/t.png?pid=70735&mpid=26021&prid=16040&tid=4",
+            "relaseDateApproved": "2019-06-10T22:00:00Z",
+            "baseSalary": "EUR pro Jahr",
+            "orderChannel": {
+              "name": "NICHT LÖSCHEN: XML Stepstone.de",
+              "id": 90,
+              "canonicalName": "kcenter.jobmanager.OrderChannel"
+            },
+            "releaseDateEnd": "02 -- 2019-08-09T22:00:00Z",
+            "name_fulltext": "02 -- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "lastUpdated": null,
+            "postingId": 70735,
+            "dynamicContent": {
+              "firmenkontakt": {
+                "value": "<p class=\"txt_grey_bold_footer\">Progroup AG</p><p class=\"txt_grey_footer\">Horstring 12, 76829 Landau</p><p class=\"txt_grey_footer\"><a href=\"https://relaxx.center/r/4b462aece663485e91ce5eaea12da983?pid=70735&mpid=26021&prid=16040&tid=4\">bewerbung@progroup.ag</a><br><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\">www.progroup.ag</a></p><p><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\"><img src=\"/api/v1/upload/serve/79075.png\" class=\"logo\" data-ker-id=\"logo\" data-ker=\"image\" alt=\"\"></a></p>"
+              },
+              "titel": {
+                "hidden": false,
+                "value": "<p><strong>Leitstandfahrer / Kraftwerker (m/w/d)</strong></p>"
+              },
+              "wir_bieten": {
+                "value": "<p>Progroup bietet Aufgaben und Entwicklungsperspektiven f&uuml;r leistungsstarke Mitarbeiter, die sich in einem familiengef&uuml;hrten Unternehmen gemeinschaftlich und l&ouml;sungsorientiert neuen Herausforderungen stellen und die Zukunft gestalten wollen. Wir sch&auml;tzen Engagement und Leistungsbereitschaft, honorieren Erfolg und f&ouml;rdern teamorientierte und durchsetzungsstarke Talente. Wir sind gespannt auf Ihre Bewerbung. Bitte bewerben Sie sich unter Angabe der Kennziffer, Ihres n&auml;chstm&ouml;glichen Eintrittstermins und Ihrer Gehaltsvorstellung vorzugsweise online &uuml;ber unsere Website: <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>"
+              },
+              "titel_einleitung": {
+                "value": "<p class=\"txt_bold\">Zur Verst&auml;rkung am Standort <span class=\"txt_color\"> Eisenh&uuml;ttenstadt</span> suchen wir schnellstm&ouml;glich einen</p>\n"
+              },
+              "profil": {
+                "value": "<ul>\n\t<li>Abgeschlossene Berufsausbildung in einem metallverarbeitenden oder elektronischen Beruf, alternativ Berufserfahrung im Bereich der Leitstandt&auml;tigkeit</li>\n\t<li>Gepr&uuml;fter Kesselw&auml;rter (m/w/d)</li>\n\t<li>Ausbildung zum gepr&uuml;ften Kraftwerker (m/w/d) (w&uuml;nschenswert)</li>\n\t<li>Erlaubnisschein zum Fahren von Gabelstaplern und Br&uuml;ckenkranen (w&uuml;nschens&shy;wert)</li>\n\t<li>Berufserfahrung im Schichtbetrieb einer Abfallverbrennungsanlage, eines Kraft&shy;werkes, einer komplexen verfahrenstechnischen Anlage oder im Ver- und Entsorgungsbereich</li>\n\t<li>Verst&auml;ndnis f&uuml;r produktionstechnische und verfahrenstechnische Zusammen&shy;h&auml;nge</li>\n\t<li>Bereitschaft sowie Eignung zum Einsatz im Wechselschichtdienst</li>\n\t<li>Sehr gute PC-Kenntnisse (MS Office etc.)</li>\n\t<li>Hohes Verantwortungs- und Sicherheitsbewusstsein</li>\n\t<li>Eigeninitiative sowie hohe Lernbereitschaft</li>\n\t<li>Freude am Arbeiten in einem erfolgreichen Team</li>\n\t<li>Verantwortungsbewusstes und selbstst&auml;ndiges Arbeiten sowie Teamf&auml;higkeit</li>\n</ul>\n"
+              },
+              "label_u_beschreibung": {
+                "hidden": false,
+                "value": "BAUEN SIE MIT UNS ZUKUNFT"
+              },
+              "titel_zusatztext": {
+                "hidden": false,
+                "value": "<p class=\"txt_grey_bold\">Kennziffer 2019-97</p>\n\n<p class=\"txt_grey\">N&auml;here Informationen zur Stelle erhalten Sie &uuml;ber unsere Webseite <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>\n"
+              },
+              "label_profil": {
+                "value": "Ihr Profil"
+              },
+              "u_beschreibung": {
+                "value": "<p>Progroup ist das f&uuml;hrende Unternehmen in der Wellpappenrohpapier- und Well&shy;pappindustrie in Europa. Was uns auszeichnet: Innovationskraft, Effizienz und Zu&shy;verl&auml;ssigkeit. So helfen wir unabh&auml;ngigen Verpackungsherstellern profitabel zu wachsen. Damit wir weiter erfolgreich auf Kurs bleiben, brauchen wir Sie!</p>\n"
+              },
+              "aufgaben": {
+                "value": "<ul><li>&Uuml;berwachung, Kontrolle, Betreuung und Bedienung der Anlagenkomponenten</li><li>Durchf&uuml;hren von An- und Abfahrvorg&auml;ngen</li><li>Anpassen von Leistung und Betriebsweise der Anlagen an den Bedarf und nach den Anforderungen der Papiermaschine innerhalb der vorgegebenen Grenzen</li><li>EBS-Krananlage bedienen</li><li>Erkennen und sofortiges reagieren bei kritischen Betriebszust&auml;nden</li><li>St&ouml;rungserkennung und Weiterbearbeitung mit dem Ziel des sicheren Betriebs&shy;ablaufs</li><li>Freischaltvorg&auml;nge und Inbetriebnahmen durchf&uuml;hren</li><li>&Uuml;berwachung und Einhaltung der Emissionsdaten</li><li>Dokumentation der Vorg&auml;nge der Schicht, insbesondere aller besonderen Vor&shy;kommnisse, Abweichungen vom Normalbetrieb und St&ouml;rungsmeldungen im Schichtbuch Leitstand</li><li>Kommunikation mit dem Schichtpersonal in allen Fragen des Anlagenbetriebs</li><li>Einhaltung der Vorgaben des Schichtleiters, insbesondere f&uuml;r die genehmigungs&shy;konforme Fahrweise der Anlagen</li><li>Umfassende sach- und termingerechte Information des Schichtleiters und der nachfolgenden Schichtf&uuml;hrer hinsichtlich erkannter M&auml;ngel, Abweichungen vom Normalbetrieb und Optimierungsm&ouml;glichkeiten</li></ul>"
+              },
+              "label_aufgaben": {
+                "value": "Ihre Aufgaben"
+              }
+            },
+            "nameFirst_fulltext": null,
+            "dateCreated": 1559910815000,
+            "jobFields": [
+              {
+                "name": "Technische Berufe",
+                "id": 53
+              }
+            ],
+            "liquidDesign": {
+              "liquid_design_ueberschriften_farbe": "#e20065",
+              "liquid_design_hintergrundfarbe": "#FFFFFF",
+              "liquid_design": "Ja",
+              "liquid_design_headerbild": "https://files.relaxx.center/kcenter-uploads/kc-01d34817a27286593cdbde0d8a93ca1c31623fd8427e8b008f989e6674ae2e11/step_header1.jpg"
+            },
+            "jobCategories": [],
+            "client": {
+              "name": "Progroup AG",
+              "logo": "/api/v1/upload/serve/172725.png",
+              "id": 51,
+              "nameShort": null
+            },
+            "logo": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/logo_treffer.png",
+            "tenant": {
+              "phoneNumber": "+49 69 4500972-0",
+              "name": "KJO-Frankfurt",
+              "id": 4,
+              "nameShort": "KJO-F",
+              "canonicalName": "kcenter.Tenant"
+            },
+            "canonicalName": "kcenter.jobmanager.Job",
+            "releaseDateBegin": "2019-06-10T22:00:00Z",
+            "identifier": null,
+            "product": {
+              "name": "stepstone.de / Professional / 60 Tage, Standard-Unternehmensprofil, Boost, 3 Refresh",
+              "productGroupId": 773,
+              "contractNumber": "diverse",
+              "runtime": 60,
+              "id": 16040,
+              "canonicalName": "kcenter.Product"
+            },
+            "employmentType": "Vollzeit",
+            "geopoint": [
+              {
+                "lon": "14.6519191",
+                "lat": "52.1477119"
+              }
+            ],
+            "metaFields": {
+              "hintData": {},
+              "contactInfoJson": {
+                "website": "https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4",
+                "facebookUrl": null,
+                "xingUrl": null,
+                "linkedInUrl": null,
+                "youtubeUrl": null,
+                "kununuUrl": null,
+                "careerUrl": null,
+                "email": "info@progroup.ag"
+              },
+              "customFields": {}
+            },
+            "jobHtmlUrl": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/19jo_57107.htm",
+            "titleTag": "Progroup AG -- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "version": null,
+            "url": "https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4",
+            "systemStatus": 0,
+            "name": "Leitstandfahrer / Kraftwerker (m/w/d)",
+            "location": [
+              {
+                "zip": "15890",
+                "country": "Deutschland",
+                "city": "Eisenhüttenstadt",
+                "street": "Oderlandstraße 110",
+                "geopoint": {
+                  "lon": "14.6519191",
+                  "lat": "52.1477119"
+                },
+                "region": "Brandenburg"
+              },
+              {
+                "zip": "666",
+                "country": "Deutschland",
+                "city": "Teufelheim",
+                "street": "TEST 666",
+                "geopoint": {
+                  "lon": "6",
+                  "lat": "66"
+                },
+                "region": "Baden-Württemberg"
+              },
+              {
+                "zip": "76646",
+                "country": "Deutschland",
+                "city": "Bruchsal",
+                "street": "TEST 110",
+                "geopoint": {
+                  "lon": "11",
+                  "lat": "50"
+                },
+                "region": "Baden-Württemberg"
+              }
+            ],
+            "status": 4
+          }
+        },
+        {
+          "_index": "kcenter_public-postings_v4",
+          "_type": "posting",
+          "_id": "70735",
+          "_score": 5,
+          "_source": {
+            "orderNumber": "19jo_57107",
+            "keywords": "Kraftwerkmeister, Techniker, Betriebstechniker, Elektrotechnikmeister, Mechatroniker, Mechaniker, Betriebsschlosser",
+            "trackingUrl": "https://relaxx.center/t.png?pid=70735&mpid=26021&prid=16040&tid=4",
+            "relaseDateApproved": "2019-06-10T22:00:00Z",
+            "baseSalary": "EUR pro Jahr",
+            "orderChannel": {
+              "name": "NICHT LÖSCHEN: XML Stepstone.de",
+              "id": 90,
+              "canonicalName": "kcenter.jobmanager.OrderChannel"
+            },
+            "releaseDateEnd": "03 -- 2019-08-09T22:00:00Z",
+            "name_fulltext": "03 -- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "lastUpdated": null,
+            "postingId": 70735,
+            "dynamicContent": {
+              "firmenkontakt": {
+                "value": "<p class=\"txt_grey_bold_footer\">Progroup AG</p><p class=\"txt_grey_footer\">Horstring 12, 76829 Landau</p><p class=\"txt_grey_footer\"><a href=\"https://relaxx.center/r/4b462aece663485e91ce5eaea12da983?pid=70735&mpid=26021&prid=16040&tid=4\">bewerbung@progroup.ag</a><br><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\">www.progroup.ag</a></p><p><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\"><img src=\"/api/v1/upload/serve/79075.png\" class=\"logo\" data-ker-id=\"logo\" data-ker=\"image\" alt=\"\"></a></p>"
+              },
+              "titel": {
+                "hidden": false,
+                "value": "<p><strong>Leitstandfahrer / Kraftwerker (m/w/d)</strong></p>"
+              },
+              "wir_bieten": {
+                "value": "<p>Progroup bietet Aufgaben und Entwicklungsperspektiven f&uuml;r leistungsstarke Mitarbeiter, die sich in einem familiengef&uuml;hrten Unternehmen gemeinschaftlich und l&ouml;sungsorientiert neuen Herausforderungen stellen und die Zukunft gestalten wollen. Wir sch&auml;tzen Engagement und Leistungsbereitschaft, honorieren Erfolg und f&ouml;rdern teamorientierte und durchsetzungsstarke Talente. Wir sind gespannt auf Ihre Bewerbung. Bitte bewerben Sie sich unter Angabe der Kennziffer, Ihres n&auml;chstm&ouml;glichen Eintrittstermins und Ihrer Gehaltsvorstellung vorzugsweise online &uuml;ber unsere Website: <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>"
+              },
+              "titel_einleitung": {
+                "value": "<p class=\"txt_bold\">Zur Verst&auml;rkung am Standort <span class=\"txt_color\"> Eisenh&uuml;ttenstadt</span> suchen wir schnellstm&ouml;glich einen</p>\n"
+              },
+              "profil": {
+                "value": "<ul>\n\t<li>Abgeschlossene Berufsausbildung in einem metallverarbeitenden oder elektronischen Beruf, alternativ Berufserfahrung im Bereich der Leitstandt&auml;tigkeit</li>\n\t<li>Gepr&uuml;fter Kesselw&auml;rter (m/w/d)</li>\n\t<li>Ausbildung zum gepr&uuml;ften Kraftwerker (m/w/d) (w&uuml;nschenswert)</li>\n\t<li>Erlaubnisschein zum Fahren von Gabelstaplern und Br&uuml;ckenkranen (w&uuml;nschens&shy;wert)</li>\n\t<li>Berufserfahrung im Schichtbetrieb einer Abfallverbrennungsanlage, eines Kraft&shy;werkes, einer komplexen verfahrenstechnischen Anlage oder im Ver- und Entsorgungsbereich</li>\n\t<li>Verst&auml;ndnis f&uuml;r produktionstechnische und verfahrenstechnische Zusammen&shy;h&auml;nge</li>\n\t<li>Bereitschaft sowie Eignung zum Einsatz im Wechselschichtdienst</li>\n\t<li>Sehr gute PC-Kenntnisse (MS Office etc.)</li>\n\t<li>Hohes Verantwortungs- und Sicherheitsbewusstsein</li>\n\t<li>Eigeninitiative sowie hohe Lernbereitschaft</li>\n\t<li>Freude am Arbeiten in einem erfolgreichen Team</li>\n\t<li>Verantwortungsbewusstes und selbstst&auml;ndiges Arbeiten sowie Teamf&auml;higkeit</li>\n</ul>\n"
+              },
+              "label_u_beschreibung": {
+                "hidden": false,
+                "value": "BAUEN SIE MIT UNS ZUKUNFT"
+              },
+              "titel_zusatztext": {
+                "hidden": false,
+                "value": "<p class=\"txt_grey_bold\">Kennziffer 2019-97</p>\n\n<p class=\"txt_grey\">N&auml;here Informationen zur Stelle erhalten Sie &uuml;ber unsere Webseite <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>\n"
+              },
+              "label_profil": {
+                "value": "Ihr Profil"
+              },
+              "u_beschreibung": {
+                "value": "<p>Progroup ist das f&uuml;hrende Unternehmen in der Wellpappenrohpapier- und Well&shy;pappindustrie in Europa. Was uns auszeichnet: Innovationskraft, Effizienz und Zu&shy;verl&auml;ssigkeit. So helfen wir unabh&auml;ngigen Verpackungsherstellern profitabel zu wachsen. Damit wir weiter erfolgreich auf Kurs bleiben, brauchen wir Sie!</p>\n"
+              },
+              "aufgaben": {
+                "value": "<ul><li>&Uuml;berwachung, Kontrolle, Betreuung und Bedienung der Anlagenkomponenten</li><li>Durchf&uuml;hren von An- und Abfahrvorg&auml;ngen</li><li>Anpassen von Leistung und Betriebsweise der Anlagen an den Bedarf und nach den Anforderungen der Papiermaschine innerhalb der vorgegebenen Grenzen</li><li>EBS-Krananlage bedienen</li><li>Erkennen und sofortiges reagieren bei kritischen Betriebszust&auml;nden</li><li>St&ouml;rungserkennung und Weiterbearbeitung mit dem Ziel des sicheren Betriebs&shy;ablaufs</li><li>Freischaltvorg&auml;nge und Inbetriebnahmen durchf&uuml;hren</li><li>&Uuml;berwachung und Einhaltung der Emissionsdaten</li><li>Dokumentation der Vorg&auml;nge der Schicht, insbesondere aller besonderen Vor&shy;kommnisse, Abweichungen vom Normalbetrieb und St&ouml;rungsmeldungen im Schichtbuch Leitstand</li><li>Kommunikation mit dem Schichtpersonal in allen Fragen des Anlagenbetriebs</li><li>Einhaltung der Vorgaben des Schichtleiters, insbesondere f&uuml;r die genehmigungs&shy;konforme Fahrweise der Anlagen</li><li>Umfassende sach- und termingerechte Information des Schichtleiters und der nachfolgenden Schichtf&uuml;hrer hinsichtlich erkannter M&auml;ngel, Abweichungen vom Normalbetrieb und Optimierungsm&ouml;glichkeiten</li></ul>"
+              },
+              "label_aufgaben": {
+                "value": "Ihre Aufgaben"
+              }
+            },
+            "nameFirst_fulltext": null,
+            "dateCreated": 1559910815000,
+            "jobFields": [
+              {
+                "name": "Technische Berufe",
+                "id": 53
+              }
+            ],
+            "liquidDesign": {
+              "liquid_design_ueberschriften_farbe": "#e20065",
+              "liquid_design_hintergrundfarbe": "#FFFFFF",
+              "liquid_design": "Ja",
+              "liquid_design_headerbild": "https://files.relaxx.center/kcenter-uploads/kc-01d34817a27286593cdbde0d8a93ca1c31623fd8427e8b008f989e6674ae2e11/step_header1.jpg"
+            },
+            "jobCategories": [],
+            "client": {
+              "name": "Progroup AG",
+              "logo": "/api/v1/upload/serve/172725.png",
+              "id": 51,
+              "nameShort": null
+            },
+            "logo": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/logo_treffer.png",
+            "tenant": {
+              "phoneNumber": "+49 69 4500972-0",
+              "name": "KJO-Frankfurt",
+              "id": 4,
+              "nameShort": "KJO-F",
+              "canonicalName": "kcenter.Tenant"
+            },
+            "canonicalName": "kcenter.jobmanager.Job",
+            "releaseDateBegin": "2019-06-10T22:00:00Z",
+            "identifier": null,
+            "product": {
+              "name": "stepstone.de / Professional / 60 Tage, Standard-Unternehmensprofil, Boost, 3 Refresh",
+              "productGroupId": 773,
+              "contractNumber": "diverse",
+              "runtime": 60,
+              "id": 16040,
+              "canonicalName": "kcenter.Product"
+            },
+            "employmentType": "Vollzeit",
+            "geopoint": [
+              {
+                "lon": "14.6519191",
+                "lat": "52.1477119"
+              }
+            ],
+            "metaFields": {
+              "hintData": {},
+              "contactInfoJson": {
+                "website": "https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4",
+                "facebookUrl": null,
+                "xingUrl": null,
+                "linkedInUrl": null,
+                "youtubeUrl": null,
+                "kununuUrl": null,
+                "careerUrl": null,
+                "email": "info@progroup.ag"
+              },
+              "customFields": {}
+            },
+            "jobHtmlUrl": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/19jo_57107.htm",
+            "titleTag": "Progroup AG -- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "version": null,
+            "url": "https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4",
+            "systemStatus": 0,
+            "name": "Leitstandfahrer / Kraftwerker (m/w/d)",
+            "location": [
+              {
+                "zip": "15890",
+                "country": "Deutschland",
+                "city": "Eisenhüttenstadt",
+                "street": "Oderlandstraße 110",
+                "geopoint": {
+                  "lon": "14.6519191",
+                  "lat": "52.1477119"
+                },
+                "region": "Brandenburg"
+              },
+              {
+                "zip": "666",
+                "country": "Deutschland",
+                "city": "Teufelheim",
+                "street": "TEST 666",
+                "geopoint": {
+                  "lon": "6",
+                  "lat": "66"
+                },
+                "region": "Baden-Württemberg"
+              },
+              {
+                "zip": "76646",
+                "country": "Deutschland",
+                "city": "Bruchsal",
+                "street": "TEST 110",
+                "geopoint": {
+                  "lon": "11",
+                  "lat": "50"
+                },
+                "region": "Baden-Württemberg"
+              }
+            ],
+            "status": 4
+          }
+        },
+        {
+          "_index": "kcenter_public-postings_v4",
+          "_type": "posting",
+          "_id": "70735",
+          "_score": 5,
+          "_source": {
+            "orderNumber": "19jo_57107",
+            "keywords": "Kraftwerkmeister, Techniker, Betriebstechniker, Elektrotechnikmeister, Mechatroniker, Mechaniker, Betriebsschlosser",
+            "trackingUrl": "https://relaxx.center/t.png?pid=70735&mpid=26021&prid=16040&tid=4",
+            "relaseDateApproved": "2019-06-10T22:00:00Z",
+            "baseSalary": "EUR pro Jahr",
+            "orderChannel": {
+              "name": "NICHT LÖSCHEN: XML Stepstone.de",
+              "id": 90,
+              "canonicalName": "kcenter.jobmanager.OrderChannel"
+            },
+            "releaseDateEnd": "04 -- 2019-08-09T22:00:00Z",
+            "name_fulltext": "04 -- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "lastUpdated": null,
+            "postingId": 70735,
+            "dynamicContent": {
+              "firmenkontakt": {
+                "value": "<p class=\"txt_grey_bold_footer\">Progroup AG</p><p class=\"txt_grey_footer\">Horstring 12, 76829 Landau</p><p class=\"txt_grey_footer\"><a href=\"https://relaxx.center/r/4b462aece663485e91ce5eaea12da983?pid=70735&mpid=26021&prid=16040&tid=4\">bewerbung@progroup.ag</a><br><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\">www.progroup.ag</a></p><p><a href=\"https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4\" target=\"_blank\"><img src=\"/api/v1/upload/serve/79075.png\" class=\"logo\" data-ker-id=\"logo\" data-ker=\"image\" alt=\"\"></a></p>"
+              },
+              "titel": {
+                "hidden": false,
+                "value": "<p><strong>Leitstandfahrer / Kraftwerker (m/w/d)</strong></p>"
+              },
+              "wir_bieten": {
+                "value": "<p>Progroup bietet Aufgaben und Entwicklungsperspektiven f&uuml;r leistungsstarke Mitarbeiter, die sich in einem familiengef&uuml;hrten Unternehmen gemeinschaftlich und l&ouml;sungsorientiert neuen Herausforderungen stellen und die Zukunft gestalten wollen. Wir sch&auml;tzen Engagement und Leistungsbereitschaft, honorieren Erfolg und f&ouml;rdern teamorientierte und durchsetzungsstarke Talente. Wir sind gespannt auf Ihre Bewerbung. Bitte bewerben Sie sich unter Angabe der Kennziffer, Ihres n&auml;chstm&ouml;glichen Eintrittstermins und Ihrer Gehaltsvorstellung vorzugsweise online &uuml;ber unsere Website: <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>"
+              },
+              "titel_einleitung": {
+                "value": "<p class=\"txt_bold\">Zur Verst&auml;rkung am Standort <span class=\"txt_color\"> Eisenh&uuml;ttenstadt</span> suchen wir schnellstm&ouml;glich einen</p>\n"
+              },
+              "profil": {
+                "value": "<ul>\n\t<li>Abgeschlossene Berufsausbildung in einem metallverarbeitenden oder elektronischen Beruf, alternativ Berufserfahrung im Bereich der Leitstandt&auml;tigkeit</li>\n\t<li>Gepr&uuml;fter Kesselw&auml;rter (m/w/d)</li>\n\t<li>Ausbildung zum gepr&uuml;ften Kraftwerker (m/w/d) (w&uuml;nschenswert)</li>\n\t<li>Erlaubnisschein zum Fahren von Gabelstaplern und Br&uuml;ckenkranen (w&uuml;nschens&shy;wert)</li>\n\t<li>Berufserfahrung im Schichtbetrieb einer Abfallverbrennungsanlage, eines Kraft&shy;werkes, einer komplexen verfahrenstechnischen Anlage oder im Ver- und Entsorgungsbereich</li>\n\t<li>Verst&auml;ndnis f&uuml;r produktionstechnische und verfahrenstechnische Zusammen&shy;h&auml;nge</li>\n\t<li>Bereitschaft sowie Eignung zum Einsatz im Wechselschichtdienst</li>\n\t<li>Sehr gute PC-Kenntnisse (MS Office etc.)</li>\n\t<li>Hohes Verantwortungs- und Sicherheitsbewusstsein</li>\n\t<li>Eigeninitiative sowie hohe Lernbereitschaft</li>\n\t<li>Freude am Arbeiten in einem erfolgreichen Team</li>\n\t<li>Verantwortungsbewusstes und selbstst&auml;ndiges Arbeiten sowie Teamf&auml;higkeit</li>\n</ul>\n"
+              },
+              "label_u_beschreibung": {
+                "hidden": false,
+                "value": "BAUEN SIE MIT UNS ZUKUNFT"
+              },
+              "titel_zusatztext": {
+                "hidden": false,
+                "value": "<p class=\"txt_grey_bold\">Kennziffer 2019-97</p>\n\n<p class=\"txt_grey\">N&auml;here Informationen zur Stelle erhalten Sie &uuml;ber unsere Webseite <a href=\"https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4\" rel=\"noopener noreferrer\" target=\"_blank\">www.jobs.progroup.ag</a>.</p>\n"
+              },
+              "label_profil": {
+                "value": "Ihr Profil"
+              },
+              "u_beschreibung": {
+                "value": "<p>Progroup ist das f&uuml;hrende Unternehmen in der Wellpappenrohpapier- und Well&shy;pappindustrie in Europa. Was uns auszeichnet: Innovationskraft, Effizienz und Zu&shy;verl&auml;ssigkeit. So helfen wir unabh&auml;ngigen Verpackungsherstellern profitabel zu wachsen. Damit wir weiter erfolgreich auf Kurs bleiben, brauchen wir Sie!</p>\n"
+              },
+              "aufgaben": {
+                "value": "<ul><li>&Uuml;berwachung, Kontrolle, Betreuung und Bedienung der Anlagenkomponenten</li><li>Durchf&uuml;hren von An- und Abfahrvorg&auml;ngen</li><li>Anpassen von Leistung und Betriebsweise der Anlagen an den Bedarf und nach den Anforderungen der Papiermaschine innerhalb der vorgegebenen Grenzen</li><li>EBS-Krananlage bedienen</li><li>Erkennen und sofortiges reagieren bei kritischen Betriebszust&auml;nden</li><li>St&ouml;rungserkennung und Weiterbearbeitung mit dem Ziel des sicheren Betriebs&shy;ablaufs</li><li>Freischaltvorg&auml;nge und Inbetriebnahmen durchf&uuml;hren</li><li>&Uuml;berwachung und Einhaltung der Emissionsdaten</li><li>Dokumentation der Vorg&auml;nge der Schicht, insbesondere aller besonderen Vor&shy;kommnisse, Abweichungen vom Normalbetrieb und St&ouml;rungsmeldungen im Schichtbuch Leitstand</li><li>Kommunikation mit dem Schichtpersonal in allen Fragen des Anlagenbetriebs</li><li>Einhaltung der Vorgaben des Schichtleiters, insbesondere f&uuml;r die genehmigungs&shy;konforme Fahrweise der Anlagen</li><li>Umfassende sach- und termingerechte Information des Schichtleiters und der nachfolgenden Schichtf&uuml;hrer hinsichtlich erkannter M&auml;ngel, Abweichungen vom Normalbetrieb und Optimierungsm&ouml;glichkeiten</li></ul>"
+              },
+              "label_aufgaben": {
+                "value": "Ihre Aufgaben"
+              }
+            },
+            "nameFirst_fulltext": null,
+            "dateCreated": 1559910815000,
+            "jobFields": [
+              {
+                "name": "Technische Berufe",
+                "id": 53
+              }
+            ],
+            "liquidDesign": {
+              "liquid_design_ueberschriften_farbe": "#e20065",
+              "liquid_design_hintergrundfarbe": "#FFFFFF",
+              "liquid_design": "Ja",
+              "liquid_design_headerbild": "https://files.relaxx.center/kcenter-uploads/kc-01d34817a27286593cdbde0d8a93ca1c31623fd8427e8b008f989e6674ae2e11/step_header1.jpg"
+            },
+            "jobCategories": [],
+            "client": {
+              "name": "Progroup AG",
+              "logo": "/api/v1/upload/serve/172725.png",
+              "id": 51,
+              "nameShort": null
+            },
+            "logo": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/logo_treffer.png",
+            "tenant": {
+              "phoneNumber": "+49 69 4500972-0",
+              "name": "KJO-Frankfurt",
+              "id": 4,
+              "nameShort": "KJO-F",
+              "canonicalName": "kcenter.Tenant"
+            },
+            "canonicalName": "kcenter.jobmanager.Job",
+            "releaseDateBegin": "2019-06-10T22:00:00Z",
+            "identifier": null,
+            "product": {
+              "name": "stepstone.de / Professional / 60 Tage, Standard-Unternehmensprofil, Boost, 3 Refresh",
+              "productGroupId": 773,
+              "contractNumber": "diverse",
+              "runtime": 60,
+              "id": 16040,
+              "canonicalName": "kcenter.Product"
+            },
+            "employmentType": "Vollzeit",
+            "geopoint": [
+              {
+                "lon": "14.6519191",
+                "lat": "52.1477119"
+              }
+            ],
+            "metaFields": {
+              "hintData": {},
+              "contactInfoJson": {
+                "website": "https://relaxx.center/r/2e84db507c0f4858bf20c7603a2f6159?pid=70735&mpid=26021&prid=16040&tid=4",
+                "facebookUrl": null,
+                "xingUrl": null,
+                "linkedInUrl": null,
+                "youtubeUrl": null,
+                "kununuUrl": null,
+                "careerUrl": null,
+                "email": "info@progroup.ag"
+              },
+              "customFields": {}
+            },
+            "jobHtmlUrl": "https://files.relaxx.center/kcenter-postings/kc-a76c2fc9dfb9492fa242c4735e9ba7a9/leitstandfahrer-kraftwerker-mwd/19jo_57107.htm",
+            "titleTag": "Progroup AG -- Leitstandfahrer / Kraftwerker (m/w/d)",
+            "version": null,
+            "url": "https://relaxx.center/r/a2fea96dd17243c289cc0a6f93bc21c0?pid=70735&mpid=26021&prid=16040&tid=4",
+            "systemStatus": 0,
+            "name": "Leitstandfahrer / Kraftwerker (m/w/d)",
+            "location": [
+              {
+                "zip": "15890",
+                "country": "Deutschland",
+                "city": "Eisenhüttenstadt",
+                "street": "Oderlandstraße 110",
+                "geopoint": {
+                  "lon": "14.6519191",
+                  "lat": "52.1477119"
+                },
+                "region": "Brandenburg"
+              },
+              {
+                "zip": "666",
+                "country": "Deutschland",
+                "city": "Teufelheim",
+                "street": "TEST 666",
+                "geopoint": {
+                  "lon": "6",
+                  "lat": "66"
+                },
+                "region": "Baden-Württemberg"
+              },
+              {
+                "zip": "76646",
+                "country": "Deutschland",
+                "city": "Bruchsal",
+                "street": "TEST 110",
+                "geopoint": {
+                  "lon": "11",
+                  "lat": "50"
+                },
+                "region": "Baden-Württemberg"
+              }
+            ],
+            "status": 4
+          }
+        },
+        {
+          "_index": "kcenter_public-postings_v4",
+          "_type": "posting",
+          "_id": "70735",
+          "_score": 5,
+          "_source": {
+            "orderNumber": "19jo_57107",
+            "keywords": "Kraftwerkmeister, Techniker, Betriebstechniker, Elektrotechnikmeister, Mechatroniker, Mechaniker, Betriebsschlosser",
+            "trackingUrl": "https://relaxx.center/t.png?pid=70735&mpid=26021&prid=16040&tid=4",
+            "relaseDateApproved": "2019-06-10T22:00:00Z",
+            "baseSalary": "EUR pro Jahr",
+            "orderChannel": {
+              "name": "NICHT LÖSCHEN: XML Stepstone.de",
+              "id": 90,
+              "canonicalName": "kcenter.jobmanager.OrderChannel"
+            },
+            "releaseDateEnd": "05 -- 2019-08-09T22:00:00Z",
+            "name_fulltext": "05 -- Leitstandfahrer / Kraftwerker (m/w/d)",
             "lastUpdated": null,
             "postingId": 70735,
             "dynamicContent": {
