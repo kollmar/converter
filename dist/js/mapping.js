@@ -1,6 +1,7 @@
 "use strict";
 
 const mapFields = {
+	"dummyVar": [],
 	"getJsons": {
 		"editor": () => {
 			return editor.get();
@@ -26,7 +27,17 @@ const mapFields = {
 		}
 	},
 	"getArrayOfDummyField": () => {
-		return document.getElementById('dummyFields').value.split('.');
+
+		let getDumArrFlds = document.getElementById('dummyFields').value.split('.');
+		if (getDumArrFlds[0] === '' && !mapFields.dummyVar.length) {
+			mapFields.dummyVar = prompt("In welcher Ebene befindet sich die Liste?").split(".");
+		}
+		
+		if (mapFields.dummyVar.length) {
+			return mapFields.dummyVar;
+		} else  {
+			return getDumArrFlds;
+		}
 	},
 	"getCountedJobs": () => {
 		let contentLeft = mapFields.getJsons.editor();
@@ -69,9 +80,9 @@ const mapFields = {
 	},
 	"changeContent": () => {
 		let newContent;
-
+		console.time('changeContent');
 		mapFields.updateJsons.editor2(mapFields.addJobsToDummy(mapFields.getCountedJobs()));
-		newContent = mapFields.getJsons.editor2();
+		newContent = mapFields.getJsons.editor2();		
 
 		// let dummyFields = mapFields.getArrayOfDummyField();
 		// dummyFields.forEach((value) => {
@@ -85,6 +96,7 @@ const mapFields = {
 		// newContent.job[0].city = "MEgathron";
 		// mapFields.updateJsons.editor2(newContent);
 		mapFields.lookingForRelaxxFields(newContent);
+		console.timeEnd('changeContent');
 	},
 	"getChanges": () => {
 		alert(this.editor2);
@@ -234,9 +246,7 @@ const mapFields = {
 	},
 	"getDummyFromMapping": () => {
 		let getArray = mapFields.getArrayOfDummyField();
-		if (getArray === '') {
-			getArray = prompt("In welcher Ebene befindet sich die Liste?").split(".");
-		}
+		
 		let json = mapFields.getJsons.editor2();
 
 		if (getArray.length === 1) {
