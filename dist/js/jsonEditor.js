@@ -23,61 +23,61 @@ editor = new JSONEditor(container, {
 editor2 = new JSONEditor(container2, options);
 // set json
 json = {
-	"Array": [
-		"took",
-		"timed_out",
-		[
-			"_shards.skipped",
-			2,
-			[
-				"_shards.skipped",
-				[
-					"_shards.skipped",
-					"hits.max_score",
-					"took"
-				],
-				[
-					"_shards.skipped",
-					2,
-					[
-						"_shards.skipped",
-						[
-							"_shards.skipped",
-							2,
-							3
-						],
-						"hits.max_score"
-					]
-				],
-				2
-			]
-		],
-		"_shards.skipped"
-	],
-	"Boolean": true,
-	"Null": "_shards.skipped",
-	"Number": 123,
-	"jobs": {
-		"a": "b",
-		"test": ["took"],
-		"c": {
-			"a": "b",
-			"c": "d"
-		},
-		"d": {
-			"a": "b",
-			"c": "d"
+	"publisher": "Super X Job Site",
+	"publisherurl": "http://www.superxjobsite.com",
+	"lastBuildDate": "Fri, 10 Dec 2004 22:49:39 GMT",
+	"job": 
+	[		
+		{
+			"title": "!it._source.name_fulltext",
+			"date": "!it._source.releaseDateBegin",
+			"referencenumber": "unique123131",
+			"url": "http://www.superxjobsite.com/viewjob.cfm?jobid=unique123131",
+			"company": "Big ABC Corporation",
+			"city": "Phoenix",
+			"state": "AZ",
+			"country": "US",
+			"postalcode": "85003",
+			"description": [],
+			"salary": "$70K per year",
+			"education": "Bachelors",
+			"jobtype": "fulltime",
+			"category": "Sales Management, Executive",
+			"experience": "5+ years"
+		},		
+		{
+			"title": "Sales Manager",
+			"date": "Thu, 9 Dec 2005 17:06:32 GMT",
+			"referencenumber": "!it._id",
+			"url": "http://www.superxjobsite.com/viewjob.cfm?jobid=unique123130",
+			"company": "Small DEF Company",
+			"city": "Austin",
+			"state": "TX",
+			"country": "US",
+			"postalcode": "78757",
+			"description": "Do you love to sell? Do you love to lead? Do you\nlove to lead people selling? Are you ready for an exciting and\nhigh-speed career in sales? If so, we want to hear from you!\n\nWe are a small, unique, and fun company that's going to make big things\nhappen. If you're looking for something a little bit different, come\nhelp us change the world!",
+			"salary": "$50K per year",
+			"jobtype": "fulltime",
+			"experience": "3+ years"
+		},		
+		{
+			"title": "Account Manager",
+			"date": "Thu, 9 Dec 2005 16:42:19 GMT",
+			"referencenumber": "unique123129",
+			"url": "http://www.superxjobsite.com/viewjob.cfm?jobid=unique123129",
+			"company": "Big ABC Corporation",
+			"city": "Phoenix",
+			"state": "AZ",
+			"country": "US",
+			"postalcode": "85003",
+			"description": "Responsible for managing large corporate accounts.\nResponsibilities include: Resolving customer issues, ensuring timely\ninventory restocks, and coordinating with marketing and operations to\nimplement new marketing programs.\n\nWe provide competitive compensation, including stock options and a full\nbenefit plan. As a fast-growing business, we offer excellent\nopportunities for exciting and challenging work. As our company\ncontinues to grow, you can expect unlimited career advancement!",
+			"salary": "$40K per year",
+			"education": "Bachelors",
+			"jobtype": "fulltime",
+			"category": "Account Mgmt",
+			"experience": "2+ years"
 		}
-	},
-	"String": "hits.hits._source.location.city",
-	"jobs": {
-		"job": [{
-			"Stellentitel": "it._source.name_fulltext",
-			"city": "it._source.location.city",
-			"zip": "it._source.location.zip"
-		}
-		]
-	}
+	]
 };
 
 const jsonDummy = () => {
