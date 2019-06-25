@@ -5,8 +5,8 @@
 	"job": 
 	[		
 		{
-			"title": "it._source.name_fulltext",
-			"date": "it._source.releaseDateBegin",
+			"title": "!it._source.name_fulltext",
+			"date": "!it._source.releaseDateBegin",
 			"referencenumber": "unique123131",
 			"url": "http://www.superxjobsite.com/viewjob.cfm?jobid=unique123131",
 			"company": "Big ABC Corporation",
@@ -24,7 +24,7 @@
 		{
 			"title": "Sales Manager",
 			"date": "Thu, 9 Dec 2005 17:06:32 GMT",
-			"referencenumber": "it._id",
+			"referencenumber": "!it._id",
 			"url": "http://www.superxjobsite.com/viewjob.cfm?jobid=unique123130",
 			"company": "Small DEF Company",
 			"city": "Austin",
