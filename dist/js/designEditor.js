@@ -1,3 +1,16 @@
+ var container = document.getElementById('jsoneditor2');
+
+ var json = {
+    'array': [1, 2, 3],
+    'boolean': true,
+    'null': null,
+    'number': 123,
+    'object': {'a': 'b', 'c': 'd'},
+    'string': 'Hello World'
+  };
+
+  var editor = new JSONEditor(container, options, json);
+
 const list = [
     "cursor-pointer btn-sm fa fa-folder-open",
     "bacursor-pointer btn-sm fa fa-floppy-or",
@@ -7,13 +20,14 @@ const list = [
     "cursor-pointer btn-sm btn-shrink fa fa-files-o",
     "cursor-pointer btn-sm btn-fullscreen fa fa-arrows-alt",
 ]
-let btnList;
+var btnList2 ="";
 for (let i = 0; i < list.length; i++) {
-    btnList += '<li class="' + list[i] + '" style="background:none; font-family: FontAwesome"><\/li>';
+    btnList2 += '<li class="' + list[i] + '" style="background:none; margin:4px 3px 0 3px; font-family:"Font Awesome 5 Pro";"><\/li>';
 }
 
 
-document.getElementById('jsoneditor')
-    .innerHTML += btnList;
+// document.getElementById('jsoneditor')
+//     .innerHTML += btnList;
 document.getElementsByClassName('jsoneditor-menu')[0]
-    .innerHTML += btnList;
+    .innerHTML += btnList2;
+
