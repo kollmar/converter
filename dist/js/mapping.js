@@ -32,10 +32,10 @@ const mapFields = {
 		if (getDumArrFlds[0] === '' && !mapFields.dummyVar.length) {
 			mapFields.dummyVar = prompt("In welcher Ebene befindet sich die Liste?").split(".");
 		}
-		
+
 		if (mapFields.dummyVar.length) {
 			return mapFields.dummyVar;
-		} else  {
+		} else {
 			return getDumArrFlds;
 		}
 	},
@@ -82,7 +82,8 @@ const mapFields = {
 		let newContent;
 		console.time('changeContent');
 		mapFields.updateJsons.editor2(mapFields.addJobsToDummy(mapFields.getCountedJobs()));
-		newContent = mapFields.getJsons.editor2();		
+		console.timeEnd('changeContent');
+		newContent = mapFields.getJsons.editor2();
 
 		// let dummyFields = mapFields.getArrayOfDummyField();
 		// dummyFields.forEach((value) => {
@@ -95,26 +96,29 @@ const mapFields = {
 		// }
 		// newContent.job[0].city = "MEgathron";
 		// mapFields.updateJsons.editor2(newContent);
+		console.time('Check Fields');
 		mapFields.lookingForRelaxxFields(newContent);
-		console.timeEnd('changeContent');
+		console.timeEnd('Check Fields');
 	},
 	"getChanges": () => {
 		alert(this.editor2);
 	},
 	"lookingForRelaxxFields": (jsonValues) => {
 		let boolFieldMapping = false;
-		let getDumArrFlds	 = mapFields.getArrayOfDummyField();
-		let newjsonValues 	 = jsonValues;
+		let getDumArrFlds = mapFields.getArrayOfDummyField();
+		let newjsonValues = jsonValues;
 		getDumArrFlds.forEach((value) => {
-			newjsonValues 	 = newjsonValues[value];
+			newjsonValues = newjsonValues[value];
 		});
 
 		newjsonValues.forEach((value, index, array) => {
+			console.time('Objekt ' + index + ' durchgegangen!');
 			Object.entries(newjsonValues[index]).forEach(([key, content], ind, arr) => {
 				mapFields.checkTypeOfFields.normalFields(content, newjsonValues[index], key, index) ||
 				mapFields.checkTypeOfFields.array(content, newjsonValues[index], key, index) ||
 				mapFields.checkTypeOfFields.object(content, newjsonValues[index], key, index) ? boolFieldMapping = true : 0;
 			});
+			console.timeEnd('Objekt ' + index + ' durchgegangen!');
 		});
 		(boolFieldMapping === true) ? mapFields.updateJsons.editor2(jsonValues): alert("Keine Felder gemappt!");
 
@@ -129,10 +133,24 @@ const mapFields = {
 					if (Array.isArray(arrList) && arrList.length) {
 						let chainContent = "";
 						for (let i = 0; i < arrList.length; i++) {
-							chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField);
-							chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");
+							// prüft, ob im Feld eine () hinterlegt ist, dass Signal um den Text in Bereiche aufzuteilen
+							let checkForArrow  = arrList[i].indexOf("()");
+
+							chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField) + " ";
+							if (checkForArrow > -1) {
+								let splitChainContent = chainContent.split(", ");
+								splitChainContent.forEach((value, index, arr) => {
+									jsonValues[key+(index+1)] = value;
+								});
+								// löscht den alten, da die neuen Objekt Properties angelegt wurden 
+								delete jsonValues[key];
+							} else {
+								chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");
+							}
+							// chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField);
+							// chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");
 						}
-						chainContent !== "undefined" ? jsonValues[key] = chainContent : 0;
+						// chainContent !== "undefined" ? jsonValues[key] = chainContent : 0;
 
 						return true;
 					}
@@ -150,8 +168,8 @@ const mapFields = {
 						if (Array.isArray(field[k])) {
 							mapFields.checkTypeOfFields.array(field[k], jsonValues[key], k, indexOfField) ? boolCheck = true : 0;
 						} else {
-							// mapFields.checkTypeOfFields.normalFields(field[k], jsonValues[key], k, indexOfField);
-							mapFields.checkTypeOfFields.normalFields(field[k], jsonValues, k, indexOfField);
+							mapFields.checkTypeOfFields.normalFields(field[k], field, k, indexOfField);
+							// mapFields.checkTypeOfFields.normalFields(field[k], jsonValues, k, indexOfField);
 						}
 					}
 				});
@@ -180,7 +198,8 @@ const mapFields = {
 								if (Array.isArray(arrList) && arrList.length) {
 									let chainContent = "";
 									for (let i = 0; i < arrList.length; i++) {
-										chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField);
+										let checkForArrow  = arrList[i].match(/.\(\)/);
+										chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField) + " ";
 										chainContent !== "undefined" ? jsonValues[key][j] = chainContent : alert(arrList[i] + " ist kein Feld");
 									}
 
@@ -199,8 +218,12 @@ const mapFields = {
 			let newContentLeft = contentLeft;
 			let newContent = "";
 			let searchField = searchingField.substring(4, searchingField.length).trim().split(".");
+			let lookingForArr = searchField.indexOf('()');
 			const getArrJobFields = document.getElementById('jobFields').value.split('.');
-
+			
+			if (lookingForArr > -1) {
+				searchField.splice(lookingForArr, 1);
+			}
 			getArrJobFields.forEach((value) => {
 				newContentLeft = newContentLeft[value];
 			});
@@ -212,6 +235,9 @@ const mapFields = {
 
 					if (searchField.length === 1) {
 						return newContent;
+					}
+					if (newContent === "undefined") {
+						return newContent = "";
 					}
 				} else {
 					if (!(i === searchField.length - 1)) {
@@ -238,7 +264,12 @@ const mapFields = {
 							}
 						}
 					} else {
-						return newContent = newContent[searchField[i]];
+						// newContent wird nach null ODER undefined abgefragt!
+						return newContent == null ? newContent = "" : newContent = newContent[searchField[i]];
+						// if (newContent == null) {
+						// 	return newContent = "";
+						// }
+						// return newContent = newContent[searchField[i]];
 					}
 				}
 			}
@@ -246,7 +277,7 @@ const mapFields = {
 	},
 	"getDummyFromMapping": () => {
 		let getArray = mapFields.getArrayOfDummyField();
-		
+
 		let json = mapFields.getJsons.editor2();
 
 		if (getArray.length === 1) {
