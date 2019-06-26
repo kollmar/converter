@@ -14,7 +14,7 @@
         {
           "_index": "kcenter_public-postings_v4",
           "_type": "posting",
-          "_id": "70735",
+          "_id": "b70735",
           "_score": 5,
           "_source": {
             "orderNumber": "19jo_57107",
@@ -177,7 +177,7 @@
         {
           "_index": "kcenter_public-postings_v4",
           "_type": "posting",
-          "_id": "70735",
+          "_id": "c70735",
           "_score": 5,
           "_source": {
             "orderNumber": "19jo_57107",
@@ -340,7 +340,7 @@
         {
           "_index": "kcenter_public-postings_v4",
           "_type": "posting",
-          "_id": "70735",
+          "_id": "d70735",
           "_score": 5,
           "_source": {
             "orderNumber": "19jo_57107",
@@ -503,7 +503,7 @@
         {
           "_index": "kcenter_public-postings_v4",
           "_type": "posting",
-          "_id": "70735",
+          "_id": "e70735",
           "_score": 5,
           "_source": {
             "orderNumber": "19jo_57107",
@@ -666,7 +666,7 @@
         {
           "_index": "kcenter_public-postings_v4",
           "_type": "posting",
-          "_id": "70735",
+          "_id": "a70735",
           "_score": 5,
           "_source": {
             "orderNumber": "19jo_57107",
