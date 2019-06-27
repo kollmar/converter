@@ -146,11 +146,11 @@ const mapFields = {
 									// löscht den alten, da die neuen Objekt Properties angelegt wurden 
 									delete jsonValues[key];
 								} else {
-									chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");	
+									chainContent !== "undefined" ? jsonValues[key] = chainContent.trim() : alert(arrList[i] + " ist kein Feld");	
 								}
 
 							} else {
-								chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");
+								chainContent !== "undefined" ? jsonValues[key] = chainContent.trim() : alert(arrList[i] + " ist kein Feld");
 							}
 							// chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField);
 							// chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");
