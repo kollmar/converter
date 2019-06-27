@@ -139,11 +139,16 @@ const mapFields = {
 							chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField) + " ";
 							if (checkForArrow > -1) {
 								let splitChainContent = chainContent.split(", ");
-								splitChainContent.forEach((value, index, arr) => {
-									jsonValues[key+(index+1)] = value;
-								});
-								// löscht den alten, da die neuen Objekt Properties angelegt wurden 
-								delete jsonValues[key];
+								if (1 < splitChainContent.length){
+									splitChainContent.forEach((value, index, arr) => {
+										jsonValues[key+(index+1)] = value;
+									});
+									// löscht den alten, da die neuen Objekt Properties angelegt wurden 
+									delete jsonValues[key];
+								} else {
+									chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");	
+								}
+
 							} else {
 								chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");
 							}
