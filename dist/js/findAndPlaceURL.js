@@ -9,7 +9,7 @@ window.onload = () => {
 	const getJSON = (url) => {
 		let baseUrl = window.location.origin;
 		// console.log(baseUrl + "/converter/proxy.php?path=" + url);
-		fetch(baseUrl + "/converter/proxy.php?path=" + url)
+		fetch(baseUrl + "/proxy.php?path=" + url)
 			.then(res => res.json())
 			.then((urlJsonData) => {
 				console.log(urlJsonData);
@@ -17,7 +17,18 @@ window.onload = () => {
 
 				json = editor.get();
 			})
-			.catch(err => console.log(err));
+			.catch((err) => {
+				console.log(err);
+				fetch(baseUrl + "/converter/proxy.php?path=" + url)
+				.then(res => res.json())
+				.then((urlJsonData) => {
+					console.log(urlJsonData);
+					editor.update(urlJsonData);
+
+					json = editor.get();
+				})
+				.catch(err => console.log(err));
+			});
 	}
 
 	document.getElementById('laden').onclick = () => {
