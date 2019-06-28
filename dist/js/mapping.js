@@ -26,18 +26,29 @@ const mapFields = {
 			return editor2.update(jsonObj);
 		}
 	},
+	"dummyField": {
+		"get": () => {
+			return document.getElementById('dummyFields').value;
+		},
+		"set": (newField) => {
+			document.getElementById('dummyFields').value = newField;
+		}
+	},
 	"getArrayOfDummyField": () => {
-
-		let getDumArrFlds = document.getElementById('dummyFields').value.split('.');
-		if (getDumArrFlds[0] === '' && !mapFields.dummyVar.length) {
-			mapFields.dummyVar = prompt("In welcher Ebene befindet sich die Liste?").split(".");
+		// TODO Hier muss noch was angepasst werden. Die Abfrage funktioniert nocht nicht 100%
+		let getDumFld = mapFields.dummyField.get();
+		
+		if (getDumFld === "") {
+			mapFields.dummyField.set(prompt("In welcher Ebene befindet sich die Liste?").split("."));			
+			getDumFld = mapFields.dummyField.get();
 		}
 
-		if (mapFields.dummyVar.length) {
-			return mapFields.dummyVar;
-		} else {
-			return getDumArrFlds;
-		}
+		return getDumFld = getDumFld.split('.');
+		// if (mapFields.dummyVar.length) {
+		// 	return mapFields.dummyVar;
+		// } else {
+		// 	return getDumArrFlds;
+		// }
 	},
 	"getCountedJobs": () => {
 		let contentLeft = mapFields.getJsons.editor();
@@ -285,14 +296,19 @@ const mapFields = {
 
 		let json = mapFields.getJsons.editor2();
 
-		if (getArray.length === 1) {
-			return json[getArray[0]][0];
-		} else {
-			for (let i = 0; i < getArray.length; i++) {
-				json = json[getArray[i]];
+		try {
+			if (getArray.length === 1) {
+				return json[getArray[0]][0];
+			} else {
+				for (let i = 0; i < getArray.length; i++) {
+					json = json[getArray[i]];
+				}
+				return json[0];
 			}
-			return json[0];
-		}
+		} catch(e) {
+			alert(mapFields.dummyField.get() + " wurde nicht gefunden");
+			mapFields.dummyField.set("");
+		};	
 	},
 	"goThroughAllObjects": () => {
 		let contentFromJson = mapFields.getJsons.editor();
