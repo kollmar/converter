@@ -88,21 +88,28 @@ json = {
 const jsonDummy = () => {
 
 	// fetch("/converter/test_relaxx_json.json")
-	fetch("http://localhost:8080/test_relaxx_json.json")
+	fetch("/test_relaxx_json.json")
 	.then(res => res.json())
 	.then((urlJsonData) => {
 		editor.update(urlJsonData);
+	}).catch((err) => {
+		fetch("http://localhost:8080/test_relaxx_json.json")
+		.then(res => res.json())
+		.then((urlJsonData) => {
+			editor.update(urlJsonData);
+		})
+		.catch((err) => {
+			console.log(err);
+				fetch("/converter/test_relaxx_json.json")
+				// fetch("http://localhost:8080/test_relaxx_json.json")
+				.then(res => res.json())
+				.then((urlJsonData) => {
+					editor.update(urlJsonData);
+				})
+				.catch(err => console.log(err));
+			});
 	})
-	.catch((err) => {
-		console.log(err);
-			fetch("/converter/test_relaxx_json.json")
-			// fetch("http://localhost:8080/test_relaxx_json.json")
-			.then(res => res.json())
-			.then((urlJsonData) => {
-				editor.update(urlJsonData);
-			})
-			.catch(err => console.log(err));
-		});
+		
 };
 
 jsonDummy();
