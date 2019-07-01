@@ -23,6 +23,6 @@ FileReaderJS.setupInput(document.getElementById('loadDocument'), {
         fname = fname.split('.')[0] + ".json";
       }
     } 
-    var blob = new Blob([editor.getText()], {type: 'application/json;charset=utf-8'});
+    var blob = new Blob([editor2.getText()], {type: 'application/json;charset=utf-8'});
     saveAs(blob, fname);
   };

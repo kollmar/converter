@@ -29,7 +29,7 @@ json = {
 	"job": 
 	[		
 		{
-			"title": "!it._source.name_fulltext",
+			"title": "!it._source.location.city.()",
 			"date": "!it._source.releaseDateBegin",
 			"referencenumber": "unique123131",
 			"url": "http://www.superxjobsite.com/viewjob.cfm?jobid=unique123131",
@@ -38,7 +38,12 @@ json = {
 			"state": "AZ",
 			"country": "US",
 			"postalcode": "85003",
-			"description": [],
+			"description": [
+				{
+					"test":"!it._id"
+				},
+				"!it._source.dynamicContent.label_aufgaben.value + !it._source.dynamicContent.label_profil.value + !it._source.dynamicContent.label_wir_bieten.value"
+			],
 			"salary": "$70K per year",
 			"education": "Bachelors",
 			"jobtype": "fulltime",
@@ -83,21 +88,28 @@ json = {
 const jsonDummy = () => {
 
 	// fetch("/converter/test_relaxx_json.json")
-	fetch("http://localhost:8080/test_relaxx_json.json")
+	fetch("/test_relaxx_json.json")
 	.then(res => res.json())
 	.then((urlJsonData) => {
 		editor.update(urlJsonData);
+	}).catch((err) => {
+		fetch("http://localhost:8080/test_relaxx_json.json")
+		.then(res => res.json())
+		.then((urlJsonData) => {
+			editor.update(urlJsonData);
+		})
+		.catch((err) => {
+			console.log(err);
+				fetch("/converter/test_relaxx_json.json")
+				// fetch("http://localhost:8080/test_relaxx_json.json")
+				.then(res => res.json())
+				.then((urlJsonData) => {
+					editor.update(urlJsonData);
+				})
+				.catch(err => console.log(err));
+			});
 	})
-	.catch((err) => {
-		console.log(err);
-			fetch("/converter/test_relaxx_json.json")
-			// fetch("http://localhost:8080/test_relaxx_json.json")
-			.then(res => res.json())
-			.then((urlJsonData) => {
-				editor.update(urlJsonData);
-			})
-			.catch(err => console.log(err));
-		});
+		
 };
 
 jsonDummy();
