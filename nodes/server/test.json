@@ -1,0 +1,29 @@
+{
+	"url": "https://relaxx.center/public/5d5e8dae93e645068eac6ffd39e8f55d/api/v1/posting.json",
+	"urlJobs": "hits.hits",
+	"dummyJobs": "job",
+	"dummy": {
+		"publisher": "Super X Job Site",
+		"publisherurl": "http://www.superxjobsite.com",
+		"lastBuildDate": "Fri, 10 Dec 2004 22:49:39 GMT",
+		"job": [{
+			"title": "!it._source.location.city.()",
+			"date": "!it._source.releaseDateBegin",
+			"referencenumber": "unique123131",
+			"url": "http://www.superxjobsite.com/viewjob.cfm?jobid=unique123131",
+			"company": "Big ABC Corporation",
+			"city": "Phoenix",
+			"state": "AZ",
+			"country": "US",
+			"postalcode": "85003",
+			"description": [{
+				"test": "!it._id"
+			}, "!it._source.dynamicContent.label_aufgaben.value + !it._source.dynamicContent.label_profil.value + !it._source.dynamicContent.label_wir_bieten.value"],
+			"salary": "$70K per year",
+			"education": "Bachelors",
+			"jobtype": "fulltime",
+			"category": "Sales Management, Executive",
+			"experience": "5+ years"
+		}]
+	}
+}

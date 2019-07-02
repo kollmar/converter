@@ -9,6 +9,7 @@
   "author": "AK",
   "license": "ISC",
   "dependencies": {
-    "jsoneditor": "^5.33.0"
+    "jsoneditor": "^5.34.0",
+    "request": "^2.88.0"
   }
 }
