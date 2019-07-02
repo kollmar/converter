@@ -106,9 +106,7 @@ const mapFields = {
 			newContent = mapFields.settings.dummy;
 		}
 		
-		console.time('Check Fields');
-		mapFields.lookingForRelaxxFields(newContent, mapFields.settings.show);
-		console.timeEnd('Check Fields');
+		return mapFields.lookingForRelaxxFields(newContent, mapFields.settings.show);
 	},
 	"getChanges": () => {
 		alert(this.editor2);
@@ -134,6 +132,7 @@ const mapFields = {
 		if (boolFieldMapping === true) {
 			if (show === 'editor') {
 				mapFields.updateJsons.editor2(jsonValues);
+				return true;
 			}
 			else {
 				return jsonValues;
@@ -248,9 +247,9 @@ const mapFields = {
 				getArrJobFields 	= document.getElementById('jobFields').value.split('.');
 			} else {
 				contentLeft			= mapFields.settings.contentLeft;
-				getArrJobFields		= mapFields.settings.dummyField
+				getArrJobFields		= mapFields.settings.dummyField.split('.');
+				console.log(getArrJobFields);
 			}
-			
 			searchField 		= searchingField.substring(4, searchingField.length).trim().split(".");
 			lookingForArr 		= searchField.indexOf('()');
 			newContentLeft 		= contentLeft;
@@ -261,10 +260,11 @@ const mapFields = {
 			getArrJobFields.forEach((value) => {
 				newContentLeft = newContentLeft[value];
 			});
+			
+			// console.log(mapFields.settings.typeOfOutput, newContentLeft, indexOfField, searchField);
 
 			for (let i = 0; i < searchField.length; i++) {
 				if (newContent === "") {
-
 					newContent = newContentLeft[indexOfField][searchField[i]];
 
 					if (searchField.length === 1) {

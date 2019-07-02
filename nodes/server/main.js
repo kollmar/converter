@@ -3,17 +3,28 @@ var Mapping     = require('../../dist/js/mapping');
 var request     = require('request');
 var readContent = fs.readFileSync('test.json');
 var jsonContent = JSON.parse(readContent);
-
-console.log(Mapping.mapFields.settings.typeOfOutput);
-console.log(Mapping.mapFields.settings.show);
+var settings	= Mapping.mapFields.settings;
+console.log(settings.typeOfOutput);
+console.log(settings.show);
 
 
 request({
 	url: jsonContent.url,
 	json: true,
-}, function (err, res, body) {
-	if (!err && res.statusCode === 200) {
-		console.log(body);
+}, (err, res, body) => {
+	try {
+		if (!err && res.statusCode === 200) {
+			settings.typeOfOutput = 'node';
+			settings.show         = 'output';
+			settings.urlJobs      = jsonContent.urlJobs;
+			settings.dummyField   = jsonContent.dummyJobs;
+			settings.dummy        = jsonContent.dummy;
+			settings.contentLeft  = body;
+			// console.log(typeof settings.dummy);
+			console.log(Mapping.mapFields.lookingForRelaxxFields(settings.dummy, settings.show));
+		}
+	} catch (err) {
+		console.log(err);
 	}
 });
 

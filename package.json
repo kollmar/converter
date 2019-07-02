@@ -4,7 +4,8 @@
   "description": "Converter for json and xml files, change nodenames, update existing feeds",
   "main": "index.js",
   "scripts": {
-    "test": "testing"
+    "start": "node ./nodes/server",
+    "debug": "nodemon --inspect ./nodes/server"
   },
   "author": "AK",
   "license": "ISC",
