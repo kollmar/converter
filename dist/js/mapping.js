@@ -1,7 +1,14 @@
 "use strict";
 
 const mapFields = {
-	"typeOfOutput":"",
+	"settings": {
+		"typeOfOutput":"html",
+		"contentLeft" :"",
+		"urlJobs":"",
+		"dummyField": "",
+		"dummy":"",
+		"show": "editor",
+	},
 	"dummyVar": [],
 	"getJsons": {
 		"editor": () => {
@@ -28,11 +35,10 @@ const mapFields = {
 		}
 	},
 	"dummyField": {
-		"dummyValue": "",
 		"get": () => {
-			return (mapFields.typeOfOutput === 'html') ? 
+			return (mapFields.settings.typeOfOutput === 'html') ? 
 					document.getElementById('dummyFields').value 
-					: mapFields.dummyField.dummyValue;
+					: mapFields.settings.dummyField;
 		},
 		"set": (newField) => {
 			document.getElementById('dummyFields').value = newField;
@@ -89,16 +95,19 @@ const mapFields = {
 
 		return contentRight;
 	},
-	"changeContent": (_typeOfOutput) => {
-		let newContent;
-		mapFields.typeOfOutput = _typeOfOutput;
-		console.time('changeContent');
-		mapFields.updateJsons.editor2(mapFields.addJobsToDummy(mapFields.getCountedJobs(), mapFields.getJsons.editor2()));
-		console.timeEnd('changeContent');
-		newContent = mapFields.getJsons.editor2();
+	"changeContent": () => {
+		let newContent;		
+		if (mapFields.settings.typeOfOutput === 'html') {
+			console.time('changeContent');
+			mapFields.updateJsons.editor2(mapFields.addJobsToDummy(mapFields.getCountedJobs(), mapFields.getJsons.editor2()));
+			console.timeEnd('changeContent');
+			newContent = mapFields.getJsons.editor2();
+		} else {
+			newContent = mapFields.settings.dummy;
+		}
 		
 		console.time('Check Fields');
-		mapFields.lookingForRelaxxFields(newContent, 'editor', _typeOfOutput);
+		mapFields.lookingForRelaxxFields(newContent, mapFields.settings.show);
 		console.timeEnd('Check Fields');
 	},
 	"getChanges": () => {
@@ -106,7 +115,7 @@ const mapFields = {
 	},
 	"lookingForRelaxxFields": (jsonValues, show) => {
 		let boolFieldMapping 	= false;
-		let getDumArrFlds 		= mapFields.getArrayOfDummyField(mapFields.typeOfOutput);
+		let getDumArrFlds 		= mapFields.getArrayOfDummyField();
 		let newjsonValues 		= jsonValues;
 		getDumArrFlds.forEach((value) => {
 			newjsonValues = newjsonValues[value];
@@ -224,14 +233,28 @@ const mapFields = {
 		}
 	},
 	"mapNewValue": {
-		"json": (searchingField, indexOfField) => {
-			let contentLeft 		= mapFields.getJsons.editor();
-			let newContentLeft 		= contentLeft;
-			let newContent 			= "";
-			let searchField 		= searchingField.substring(4, searchingField.length).trim().split(".");
-			let lookingForArr 		= searchField.indexOf('()');
-			const getArrJobFields 	= document.getElementById('jobFields').value.split('.');
+		"json": (_searchingField, _indexOfField) => {
+			let contentLeft,
+				newContentLeft,
+				getArrJobFields,
+				searchField,
+				lookingForArr,
+				newContent 		= "",
+				searchingField 	= _searchingField,
+				indexOfField 	= _indexOfField;
+
+			if (mapFields.settings.typeOfOutput === 'html') {
+				contentLeft 		= mapFields.getJsons.editor();
+				getArrJobFields 	= document.getElementById('jobFields').value.split('.');
+			} else {
+				contentLeft			= mapFields.settings.contentLeft;
+				getArrJobFields		= mapFields.settings.dummyField
+			}
 			
+			searchField 		= searchingField.substring(4, searchingField.length).trim().split(".");
+			lookingForArr 		= searchField.indexOf('()');
+			newContentLeft 		= contentLeft;
+
 			if (lookingForArr > -1) {
 				searchField.splice(lookingForArr, 1);
 			}
