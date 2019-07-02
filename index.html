@@ -17,17 +17,16 @@
 
 <body>
 	<div class="header">
-		<img src="https://raven51.de/wp-content/uploads/2018/11/branding.png">
+		<img src="node_modules/jsoneditor/dist/raven_logo.svg">
 		<p>Converter</p>
 	</div>
 	<div class="wrapper">
 		<div class="topSide">
-
 			<div class="links">
 				<label for="jsonURL">URL der JSON-URL hinterlegen</label><br>
 				<input type="url" name="jsonURL" id="jsonURL"
 					value="https://relaxx.center/public/5d5e8dae93e645068eac6ffd39e8f55d/api/v1/posting.json">
-				<button type="submit" name="laden" id="laden"><span class="fas fa-upload fa-lg" style="color: #fff">
+				<button type="submit" name="laden" id="laden"><span class="fas fa-upload fa-lg laden">
 						<p>Laden</p>
 					</span></button>
 				<br><br>
@@ -36,11 +35,9 @@
 				<button type="submit" name="reloadToObj" id="reloadToJSON">reload als JSON</button>
 			</div>
 			<div class="rechts">
+				<input type="text" name="dummyFields" id="dummyFields" value="job" id="dummyField"><br><br>
 				<button id="getDummyMapping">get JSON from dummy</button>
-				<input type="text" name="dummyFields" id="dummyFields" value="job"><br><br>
 				<p>
-
-
 					Load a JSON document: <input type="file" id="loadDocument" value="Load" />
 				</p>
 				<p>
