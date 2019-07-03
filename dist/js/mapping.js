@@ -1,6 +1,14 @@
 "use strict";
 
 const mapFields = {
+	"settings": {
+		"typeOfOutput":"html",
+		"contentLeft" :"",
+		"urlJobs":"",
+		"dummyField": "",
+		"dummy":"",
+		"show": "editor",
+	},
 	"dummyVar": [],
 	"getJsons": {
 		"editor": () => {
@@ -28,7 +36,9 @@ const mapFields = {
 	},
 	"dummyField": {
 		"get": () => {
-			return document.getElementById('dummyFields').value;
+			return (mapFields.settings.typeOfOutput === 'html') ? 
+					document.getElementById('dummyFields').value 
+					: mapFields.settings.dummyField;
 		},
 		"set": (newField) => {
 			document.getElementById('dummyFields').value = newField;
@@ -51,9 +61,17 @@ const mapFields = {
 		// }
 	},
 	"getCountedJobs": () => {
-		let contentLeft = mapFields.getJsons.editor();
+		let contentLeft    = "";
+		let getArrayOfJobs = "";
+		let typeOfOutput   = mapFields.settings.typeOfOutput;
 
-		let getArrayOfJobs = document.getElementById('jobFields').value;
+		if (typeOfOutput === 'html') {
+			contentLeft    = mapFields.getJsons.editor();
+			getArrayOfJobs = document.getElementById('jobFields').value;
+		} else {
+			contentLeft    = mapFields.settings.contentLeft;
+			getArrayOfJobs = mapFields.settings.urlJobs;
+		}
 
 		if (getArrayOfJobs !== "") {
 			getArrayOfJobs = getArrayOfJobs.split('.');
@@ -67,22 +85,19 @@ const mapFields = {
 			return 1;
 		}
 	},
-	"addJobsToDummy": (_counter) => {
-		let counter = _counter;
-		let contentRight = mapFields.getJsons.editor2();
-		// let newContentRight = "";
-		let newContentRight = contentRight;
-		let contentRightObject = mapFields.getDummyFromMapping();
-		let getDumArrFlds = mapFields.getArrayOfDummyField();
+	"addJobsToDummy": (_counter, _dummyContent) => {
+		let counter 			= _counter;
+		let contentRight 		= _dummyContent;
+		let newContentRight 	= contentRight;
+		let contentRightObject 	= mapFields.getDummyFromMapping();
+		let getDumArrFlds 		= mapFields.getArrayOfDummyField(mapFields.typeOfOutput);
 
 		getDumArrFlds.forEach((value) => {
-			// newContentRight = contentRight[value];
 			newContentRight = newContentRight[value];
 		});
-		// let countDummy = newContentRight.length;
 
 		// Array wird komplett geleert, da bei der variante var x = [] das referenzierte Objekt nicht geleert. https://www.jstips.co/en/javascript/two-ways-to-empty-an-array/ 
-		newContentRight.length = 0;
+		newContentRight.length 	= 0;
 		for (let i = 0; i < counter; i++) {
 			newContentRight.push(contentRightObject);
 		}
@@ -90,34 +105,27 @@ const mapFields = {
 		return contentRight;
 	},
 	"changeContent": () => {
-		let newContent;
-		console.time('changeContent');
-		mapFields.updateJsons.editor2(mapFields.addJobsToDummy(mapFields.getCountedJobs()));
-		console.timeEnd('changeContent');
-		newContent = mapFields.getJsons.editor2();
-
-		// let dummyFields = mapFields.getArrayOfDummyField();
-		// dummyFields.forEach((value) => {
-		// 	newContent = contentRight[value];
-		// });
-
-		// for (let i = 0; i < newContent['job'].length; i++) {
-		// mapFields.lookingForRelaxxFields(newContent['job'][i]);
-		// console.log(newContent['job'][i]);
-		// }
-		// newContent.job[0].city = "MEgathron";
-		// mapFields.updateJsons.editor2(newContent);
-		console.time('Check Fields');
-		mapFields.lookingForRelaxxFields(newContent);
-		console.timeEnd('Check Fields');
+		let newContent;		
+		if (mapFields.settings.typeOfOutput === 'html') {
+			console.time('changeContent');
+			mapFields.updateJsons.editor2(mapFields.addJobsToDummy(mapFields.getCountedJobs(), mapFields.getJsons.editor2()));
+			console.timeEnd('changeContent');
+			newContent = mapFields.getJsons.editor2();
+		} else {
+			newContent = mapFields.settings.dummy;
+		}
+		
+		return mapFields.lookingForRelaxxFields(newContent, mapFields.settings.show);
 	},
 	"getChanges": () => {
 		alert(this.editor2);
 	},
-	"lookingForRelaxxFields": (jsonValues) => {
-		let boolFieldMapping = false;
-		let getDumArrFlds = mapFields.getArrayOfDummyField();
-		let newjsonValues = jsonValues;
+	"lookingForRelaxxFields": (jsonValues, show) => {
+		let boolFieldMapping 	= false;
+		let typeOfOutput = mapFields.settings.typeOfOutput;
+		let getDumArrFlds 		= mapFields.getArrayOfDummyField();
+		let newjsonValues 		= jsonValues;
+		
 		getDumArrFlds.forEach((value) => {
 			newjsonValues = newjsonValues[value];
 		});
@@ -131,8 +139,22 @@ const mapFields = {
 			});
 			console.timeEnd('Objekt ' + index + ' durchgegangen!');
 		});
-		(boolFieldMapping === true) ? mapFields.updateJsons.editor2(jsonValues): alert("Keine Felder gemappt!");
-
+		// (boolFieldMapping === true) ? mapFields.updateJsons.editor2(jsonValues): alert("Keine Felder gemappt!");
+		if (boolFieldMapping === true) {
+			if (show === 'editor') {
+				mapFields.updateJsons.editor2(jsonValues);
+				return true;
+			}
+			else {
+				return jsonValues;
+			}
+		} else {
+			if(typeOfOutput === 'html') {
+				alert("Keine Felder gemappt!");
+			} else {
+				console.log("Keine Felder gemappt");
+			}
+		}
 	},
 	"checkTypeOfFields": {
 		"normalFields": (field, jsonValues, key, indexOfField) => {
@@ -152,7 +174,7 @@ const mapFields = {
 								let splitChainContent = chainContent.split(", ");
 								if (1 < splitChainContent.length){
 									splitChainContent.forEach((value, index, arr) => {
-										jsonValues[key+(index+1)] = value;
+										jsonValues[key + (index + 1)] = value;
 									});
 									// löscht den alten, da die neuen Objekt Properties angelegt wurden 
 									delete jsonValues[key];
@@ -163,10 +185,7 @@ const mapFields = {
 							} else {
 								chainContent !== "undefined" ? jsonValues[key] = chainContent.trim() : alert(arrList[i] + " ist kein Feld");
 							}
-							// chainContent += mapFields.mapNewValue.json(arrList[i], indexOfField);
-							// chainContent !== "undefined" ? jsonValues[key] = chainContent : alert(arrList[i] + " ist kein Feld");
 						}
-						// chainContent !== "undefined" ? jsonValues[key] = chainContent : 0;
 
 						return true;
 					}
@@ -184,8 +203,7 @@ const mapFields = {
 						if (Array.isArray(field[k])) {
 							mapFields.checkTypeOfFields.array(field[k], jsonValues[key], k, indexOfField) ? boolCheck = true : 0;
 						} else {
-							mapFields.checkTypeOfFields.normalFields(field[k], field, k, indexOfField);
-							// mapFields.checkTypeOfFields.normalFields(field[k], jsonValues, k, indexOfField);
+							mapFields.checkTypeOfFields.normalFields(field[k], field, k, indexOfField);	
 						}
 					}
 				});
@@ -229,13 +247,26 @@ const mapFields = {
 		}
 	},
 	"mapNewValue": {
-		"json": (searchingField, indexOfField) => {
-			let contentLeft = mapFields.getJsons.editor();
-			let newContentLeft = contentLeft;
-			let newContent = "";
-			let searchField = searchingField.substring(4, searchingField.length).trim().split(".");
-			let lookingForArr = searchField.indexOf('()');
-			const getArrJobFields = document.getElementById('jobFields').value.split('.');
+		"json": (_searchingField, _indexOfField) => {
+			let contentLeft,
+				newContentLeft,
+				getArrJobFields,
+				searchField,
+				lookingForArr,
+				newContent 		= "",
+				searchingField 	= _searchingField,
+				indexOfField 	= _indexOfField;
+
+			if (mapFields.settings.typeOfOutput === 'html') {
+				contentLeft 		= mapFields.getJsons.editor();
+				getArrJobFields 	= document.getElementById('jobFields').value.split('.');
+			} else {
+				contentLeft			= mapFields.settings.contentLeft;
+				getArrJobFields		= mapFields.settings.urlJobs.split('.');
+			}
+			searchField 		= searchingField.substring(4, searchingField.length).trim().split(".");
+			lookingForArr 		= searchField.indexOf('()');
+			newContentLeft 		= contentLeft;
 			
 			if (lookingForArr > -1) {
 				searchField.splice(lookingForArr, 1);
@@ -243,10 +274,11 @@ const mapFields = {
 			getArrJobFields.forEach((value) => {
 				newContentLeft = newContentLeft[value];
 			});
+			
+			// console.log(mapFields.settings.typeOfOutput, newContentLeft, indexOfField, searchField);
 
 			for (let i = 0; i < searchField.length; i++) {
 				if (newContent === "") {
-
 					newContent = newContentLeft[indexOfField][searchField[i]];
 
 					if (searchField.length === 1) {
@@ -259,7 +291,7 @@ const mapFields = {
 					if (!(i === searchField.length - 1)) {
 						newContent = newContent[searchField[i]];
 						if (Array.isArray(newContent)) {
-							let tempLength = newContent.length;
+							let tempLength 	= newContent.length;
 							let tempContent = [];
 							for (let j = 0; j < tempLength; j++) {
 
@@ -292,9 +324,15 @@ const mapFields = {
 		}
 	},
 	"getDummyFromMapping": () => {
-		let getArray = mapFields.getArrayOfDummyField();
+		let getArray     = mapFields.getArrayOfDummyField();
+		let typeOfOutput = mapFields.settings.typeOfOutput
+		let json         = "";
 
-		let json = mapFields.getJsons.editor2();
+		if(typeOfOutput === 'html') {
+			json = mapFields.getJsons.editor2();
+		} else {
+			json = mapFields.settings.dummy; 
+		}
 
 		try {
 			if (getArray.length === 1) {
@@ -306,16 +344,21 @@ const mapFields = {
 				return json[0];
 			}
 		} catch(e) {
-			alert(mapFields.dummyField.get() + " wurde nicht gefunden");
-			mapFields.dummyField.set("");
+			console.log(mapFields.dummyField.get() + " wurde nicht gefunden");
+			if(typeOfOutput === 'html') {
+				mapFields.dummyField.set("");
+			}
 		};	
 	},
 	"goThroughAllObjects": () => {
-		let contentFromJson = mapFields.getJsons.editor();
-
+		let contentFromJson  = mapFields.getJsons.editor();
 		let getArrayFromJson = document.getElementById('jobFields').value;
 
 		let allJobs = contentFromJson[getArrayFromJson[0]][getArrayFromJson[1]];
 		console.log(allJobs);
 	}
+}
+
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+	module.exports.mapFields = mapFields;
 }

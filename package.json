@@ -4,11 +4,13 @@
   "description": "Converter for json and xml files, change nodenames, update existing feeds",
   "main": "index.js",
   "scripts": {
-    "test": "testing"
+    "start": "node ./nodes/server",
+    "debug": "nodemon --inspect ./nodes/server"
   },
   "author": "AK",
   "license": "ISC",
   "dependencies": {
-    "jsoneditor": "^5.33.0"
+    "jsoneditor": "^5.34.0",
+    "request": "^2.88.0"
   }
 }
