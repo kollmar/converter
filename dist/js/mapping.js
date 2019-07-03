@@ -125,6 +125,7 @@ const mapFields = {
 		let typeOfOutput = mapFields.settings.typeOfOutput;
 		let getDumArrFlds 		= mapFields.getArrayOfDummyField();
 		let newjsonValues 		= jsonValues;
+		
 		getDumArrFlds.forEach((value) => {
 			newjsonValues = newjsonValues[value];
 		});
@@ -202,7 +203,7 @@ const mapFields = {
 						if (Array.isArray(field[k])) {
 							mapFields.checkTypeOfFields.array(field[k], jsonValues[key], k, indexOfField) ? boolCheck = true : 0;
 						} else {
-							mapFields.checkTypeOfFields.normalFields(field[k], field, k, indexOfField);							
+							mapFields.checkTypeOfFields.normalFields(field[k], field, k, indexOfField);	
 						}
 					}
 				});
@@ -266,7 +267,7 @@ const mapFields = {
 			searchField 		= searchingField.substring(4, searchingField.length).trim().split(".");
 			lookingForArr 		= searchField.indexOf('()');
 			newContentLeft 		= contentLeft;
-
+			
 			if (lookingForArr > -1) {
 				searchField.splice(lookingForArr, 1);
 			}
