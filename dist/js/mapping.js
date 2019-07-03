@@ -52,7 +52,7 @@ const mapFields = {
 			mapFields.dummyField.set(prompt("In welcher Ebene befindet sich die Liste?").split("."));			
 			getDumFld = mapFields.dummyField.get();
 		}
-
+		
 		return getDumFld = getDumFld.split('.');
 		// if (mapFields.dummyVar.length) {
 		// 	return mapFields.dummyVar;
@@ -114,32 +114,36 @@ const mapFields = {
 		} else {
 			newContent = mapFields.settings.dummy;
 		}
-		
+
 		return mapFields.lookingForRelaxxFields(newContent, mapFields.settings.show);
 	},
 	"getChanges": () => {
 		alert(this.editor2);
 	},
 	"lookingForRelaxxFields": (jsonValues, show) => {
-		let boolFieldMapping 	= false;
-		let typeOfOutput = mapFields.settings.typeOfOutput;
-		let getDumArrFlds 		= mapFields.getArrayOfDummyField();
-		let newjsonValues 		= jsonValues;
+		
+		let boolFieldMapping = false;
+		let typeOfOutput     = mapFields.settings.typeOfOutput;
+		let getDumArrFlds    = mapFields.getArrayOfDummyField();
+		let newjsonValues 	 = jsonValues;
 		
 		getDumArrFlds.forEach((value) => {
 			newjsonValues = newjsonValues[value];
 		});
-
+		
 		newjsonValues.forEach((value, index, array) => {
 			console.time('Objekt ' + index + ' durchgegangen!');
 			Object.entries(newjsonValues[index]).forEach(([key, content], ind, arr) => {
+				
 				mapFields.checkTypeOfFields.normalFields(content, newjsonValues[index], key, index) ||
 				mapFields.checkTypeOfFields.array(content, newjsonValues[index], key, index) ||
 				mapFields.checkTypeOfFields.object(content, newjsonValues[index], key, index) ? boolFieldMapping = true : 0;
+				
+				mapFields.checkTypeOfFields.normalFields(content, newjsonValues[index], key, index) ? boolFieldMapping = true : 0;
 			});
 			console.timeEnd('Objekt ' + index + ' durchgegangen!');
 		});
-		// (boolFieldMapping === true) ? mapFields.updateJsons.editor2(jsonValues): alert("Keine Felder gemappt!");
+		
 		if (boolFieldMapping === true) {
 			if (show === 'editor') {
 				mapFields.updateJsons.editor2(jsonValues);
@@ -253,7 +257,7 @@ const mapFields = {
 				getArrJobFields,
 				searchField,
 				lookingForArr,
-				newContent 		= "",
+				newContent      = null,
 				searchingField 	= _searchingField,
 				indexOfField 	= _indexOfField;
 
@@ -275,10 +279,8 @@ const mapFields = {
 				newContentLeft = newContentLeft[value];
 			});
 			
-			// console.log(mapFields.settings.typeOfOutput, newContentLeft, indexOfField, searchField);
-
 			for (let i = 0; i < searchField.length; i++) {
-				if (newContent === "") {
+				if (newContent === null) {
 					newContent = newContentLeft[indexOfField][searchField[i]];
 
 					if (searchField.length === 1) {
@@ -312,12 +314,7 @@ const mapFields = {
 							}
 						}
 					} else {
-						// newContent wird nach null ODER undefined abgefragt!
 						return newContent == null ? newContent = "" : newContent = newContent[searchField[i]];
-						// if (newContent == null) {
-						// 	return newContent = "";
-						// }
-						// return newContent = newContent[searchField[i]];
 					}
 				}
 			}
