@@ -61,8 +61,17 @@ const mapFields = {
 		// }
 	},
 	"getCountedJobs": () => {
-		let contentLeft 	= mapFields.getJsons.editor();
-		let getArrayOfJobs 	= document.getElementById('jobFields').value;
+		let contentLeft    = "";
+		let getArrayOfJobs = "";
+		let typeOfOutput   = mapFields.settings.typeOfOutput;
+
+		if (typeOfOutput === 'html') {
+			contentLeft    = mapFields.getJsons.editor();
+			getArrayOfJobs = document.getElementById('jobFields').value;
+		} else {
+			contentLeft    = mapFields.settings.contentLeft;
+			getArrayOfJobs = mapFields.settings.urlJobs;
+		}
 
 		if (getArrayOfJobs !== "") {
 			getArrayOfJobs = getArrayOfJobs.split('.');
@@ -113,6 +122,7 @@ const mapFields = {
 	},
 	"lookingForRelaxxFields": (jsonValues, show) => {
 		let boolFieldMapping 	= false;
+		let typeOfOutput = mapFields.settings.typeOfOutput;
 		let getDumArrFlds 		= mapFields.getArrayOfDummyField();
 		let newjsonValues 		= jsonValues;
 		getDumArrFlds.forEach((value) => {
@@ -138,7 +148,11 @@ const mapFields = {
 				return jsonValues;
 			}
 		} else {
-			alert("Keine Felder gemappt!");
+			if(typeOfOutput === 'html') {
+				alert("Keine Felder gemappt!");
+			} else {
+				console.log("Keine Felder gemappt");
+			}
 		}
 	},
 	"checkTypeOfFields": {
@@ -247,8 +261,7 @@ const mapFields = {
 				getArrJobFields 	= document.getElementById('jobFields').value.split('.');
 			} else {
 				contentLeft			= mapFields.settings.contentLeft;
-				getArrJobFields		= mapFields.settings.dummyField.split('.');
-				console.log(getArrJobFields);
+				getArrJobFields		= mapFields.settings.urlJobs.split('.');
 			}
 			searchField 		= searchingField.substring(4, searchingField.length).trim().split(".");
 			lookingForArr 		= searchField.indexOf('()');
@@ -310,8 +323,15 @@ const mapFields = {
 		}
 	},
 	"getDummyFromMapping": () => {
-		let getArray 	= mapFields.getArrayOfDummyField(mapFields.typeOfOutput);
-		let json 		= mapFields.getJsons.editor2();
+		let getArray     = mapFields.getArrayOfDummyField();
+		let typeOfOutput = mapFields.settings.typeOfOutput
+		let json         = "";
+
+		if(typeOfOutput === 'html') {
+			json = mapFields.getJsons.editor2();
+		} else {
+			json = mapFields.settings.dummy; 
+		}
 
 		try {
 			if (getArray.length === 1) {
@@ -323,8 +343,10 @@ const mapFields = {
 				return json[0];
 			}
 		} catch(e) {
-			alert(mapFields.dummyField.get() + " wurde nicht gefunden");
-			mapFields.dummyField.set("");
+			console.log(mapFields.dummyField.get() + " wurde nicht gefunden");
+			if(typeOfOutput === 'html') {
+				mapFields.dummyField.set("");
+			}
 		};	
 	},
 	"goThroughAllObjects": () => {

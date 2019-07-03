@@ -20,8 +20,10 @@ request({
 			settings.dummyField   = jsonContent.dummyJobs;
 			settings.dummy        = jsonContent.dummy;
 			settings.contentLeft  = body;
-			// console.log(typeof settings.dummy);
-			console.log(Mapping.mapFields.lookingForRelaxxFields(settings.dummy, settings.show));
+			
+			console.log(Mapping.mapFields.addJobsToDummy(Mapping.mapFields.getCountedJobs, jsonContent.dummy));
+			// settings.dummy = Mapping.mapFields.addJobsToDummy(Mapping.mapFields.getCountedJobs, jsonContent.dummy);
+			// console.log(Mapping.mapFields.lookingForRelaxxFields(settings.dummy, settings.show));
 		}
 	} catch (err) {
 		console.log(err);
