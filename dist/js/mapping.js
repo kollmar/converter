@@ -121,11 +121,10 @@ const mapFields = {
 		alert(this.editor2);
 	},
 	"lookingForRelaxxFields": (jsonValues, show) => {
-		
-		let boolFieldMapping = false;
-		let typeOfOutput     = mapFields.settings.typeOfOutput;
-		let getDumArrFlds    = mapFields.getArrayOfDummyField();
-		let newjsonValues 	 = jsonValues;
+		let boolFieldMapping 	= false;
+		let typeOfOutput = mapFields.settings.typeOfOutput;
+		let getDumArrFlds 		= mapFields.getArrayOfDummyField();
+		let newjsonValues 		= jsonValues;
 		
 		getDumArrFlds.forEach((value) => {
 			newjsonValues = newjsonValues[value];
