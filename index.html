@@ -5,7 +5,7 @@
 	<!-- when using the mode "code", it's important to specify charset utf-8 -->
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-	<link href="node_modules/jsoneditor/dist/design.css" rel="stylesheet" type="text/css">
+	<link href="dist/css/design.css" rel="stylesheet" type="text/css">
 	<link href="node_modules/jsoneditor/dist/jsoneditor.css" rel="stylesheet" type="text/css">
 	<script src="node_modules/jsoneditor/dist/jsoneditor.min.js"></script>
 	<script src="https://bgrins.github.io/filereader.js/filereader.js"></script>
@@ -40,7 +40,7 @@
 				</div> -->
 				<label for="real-input">JSON-Datei laden...</label><br>
 				<div class="input-container">
-					<input type="file" id="real-input">
+					<input type="file" class="real-input" id="loadDocument" value="Load" />
 					<button class="browse-btn">
 							<span class="fas fa-code fa-lg fa-code">
 								<p>Dateien durchsuchen ...</p
@@ -51,9 +51,9 @@
 				<br><br>
 				<input type="text" name="dummyFields" id="dummyFields" value="job" id="dummyField"><br><br>
 				<button id="getDummyMapping">get JSON from dummy</button>
-				<p>
+				<!-- <p>
 					Load a JSON document: <input type="file" id="loadDocument" value="Load" />
-				</p>
+				</p> -->
 				<p>
 					Projekt speichern: <input type="button" id="saveDocument" value="Save" />
 				</p>
