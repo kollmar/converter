@@ -8,11 +8,7 @@ uploadButton.addEventListener('click', (e) => {
 
 realInput.addEventListener('change', () => {
   const name = realInput.value.split(/\\|\//).pop();
-  const truncated = name.length > 20 
-    ? name.substr(name.length - 20) 
-    : name;
-  
-  fileInfo.innerHTML = truncated;
+  fileInfo.innerHTML = name;
 });
 
 //  var container = document.getElementById('jsoneditor2');
