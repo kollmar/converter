@@ -271,6 +271,11 @@ button#laden:hover {
   border-radius: 8px;
 }
 
+button:focus {
+  border: none;
+  outline-width: 0px;
+}
+
 button#laden:active {
   /* background: linear-gradient(#d6454e, #de000d); */
   background-color: #d6454e;
