@@ -12,7 +12,7 @@ realInput.addEventListener('change', () => {
 });
 
 function myFunction() {
-  document.getElementById("sliderCheck").disabled = true;
+  document.getElementById("slider").disabled == true;
 });
 
 //  var container = document.getElementById('jsoneditor2');
