@@ -11,6 +11,10 @@ realInput.addEventListener('change', () => {
   fileInfo.innerHTML = name;
 });
 
+function myFunction() {
+  document.getElementById("sliderCheck").disabled = true;
+});
+
 //  var container = document.getElementById('jsoneditor2');
 
 //  var json = {
