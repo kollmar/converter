@@ -52,6 +52,5 @@ window.onload = () => {
 	}
 	document.getElementById('jsoneditor').ondblclick = () => {
 		console.log(mapFields.getCountedJobs());
-		mapFields.addJobsToDummy(mapFields.getCountedJobs());
 	}
 }
