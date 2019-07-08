@@ -7,7 +7,10 @@ FileReaderJS.setupInput(document.getElementById('loadDocument'), {
 		}
 	}
 });
-
+document.onclick = () => {
+	fetch('http://localhost:8888/').then(alert('/click geht'));
+	// alert("test");
+}
 // Save a JSON document
 document.getElementById('saveDocument').onclick = function () {
 	// Save Dialog
