@@ -1,6 +1,6 @@
 {
   "name": "converter",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "description": "Converter for json and xml files, change nodenames, update existing feeds",
   "main": "index.js",
   "scripts": {
