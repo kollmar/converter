@@ -5,7 +5,7 @@
 	<!-- when using the mode "code", it's important to specify charset utf-8 -->
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-	<link href="node_modules/jsoneditor/dist/design.css" rel="stylesheet" type="text/css">
+	<link href="dist/css/design.css" rel="stylesheet" type="text/css">
 	<link href="node_modules/jsoneditor/dist/jsoneditor.css" rel="stylesheet" type="text/css">
 	<script src="node_modules/jsoneditor/dist/jsoneditor.min.js"></script>
 	<script src="https://bgrins.github.io/filereader.js/filereader.js"></script>
@@ -28,8 +28,27 @@
 					value="https://relaxx.center/public/5d5e8dae93e645068eac6ffd39e8f55d/api/v1/posting.json">
 				<button type="submit" name="laden" id="laden"><span class="fas fa-upload fa-lg laden">
 						<p>URL Laden</p>
-					</span></button>
-				<br><br>
+					</span>
+				</button>
+
+				<br><br><br>
+				<!-- The Toggle -->
+				<div id="authField">
+					<label for="activeAuth">Authentifizierung aktivieren</label>
+					<!-- Rounded switch -->
+					<label class="switch">
+						<input type="checkbox" id="sliderCheck">
+						<span class="slider round"></span>
+						
+					</label>
+					<br>
+
+					<input type="text" name="authName" id="authName" placeholder="Name..." disabled>
+					<input type="text" name="authPassword" id="authPwd" placeholder="Password..." disabled>
+					<button type="submit" name="authCheck" id="authCheck">Check</button>
+				</div>
+				<br>
+
 				<input type="text" name="jobFields" id="jobFields" value="hits.hits"><br><br>
 				<button type="submit" name="reloadToList" id="reloadToList">reload als Liste</button>
 				<button type="submit" name="reloadToObj" id="reloadToJSON">reload als JSON</button>
@@ -40,20 +59,20 @@
 				</div> -->
 				<label for="real-input">JSON-Datei laden...</label><br>
 				<div class="input-container">
-					<input type="file" id="real-input">
+					<input type="file" class="real-input" id="loadDocument" value="Load" />
 					<button class="browse-btn">
-							<span class="fas fa-code fa-lg fa-code">
-								<p>Dateien durchsuchen ...</p
-							></span>
+						<span class="fas fa-code fa-lg fa-code">
+							<p>Dateien durchsuchen ...</p>
+						</span>
 					</button>
 					<span class="file-info">Keine ausgewählt...</span>
 				</div>
 				<br><br>
 				<input type="text" name="dummyFields" id="dummyFields" value="job" id="dummyField"><br><br>
 				<button id="getDummyMapping">get JSON from dummy</button>
-				<p>
+				<!-- <p>
 					Load a JSON document: <input type="file" id="loadDocument" value="Load" />
-				</p>
+				</p> -->
 				<p>
 					Projekt speichern: <input type="button" id="saveDocument" value="Save" />
 				</p>
@@ -70,7 +89,7 @@
 	<script src="dist/js/load_and_save.js"></script>
 	<script src="dist/js/jsonEditor.js"></script>
 	<script src="dist/js/mapping.js"></script>
-	<!-- <script src="dist/js/designEditor.js"></script> -->
+	<script src="dist/js/designEditor.js"></script>
 </body>
 
 </html>
