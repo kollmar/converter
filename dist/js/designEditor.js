@@ -9,13 +9,6 @@ uploadButton.addEventListener('click', (e) => {
 realInput.addEventListener('change', () => {
   const name = realInput.value.split(/\\|\//).pop();
   fileInfo.innerHTML = name;
-<<<<<<< HEAD
-=======
-});
-
-function myFunction() {
-  document.getElementById("slider").disabled == true;
->>>>>>> a0716ec0eac9b291063d5a5f026ac2da9dc453fc
 });
 
 function myFunction() {

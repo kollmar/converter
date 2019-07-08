@@ -115,8 +115,4 @@ jsonDummy();
 editor2.set(json);
 
 // get json
-<<<<<<< HEAD
 // json = editor.get();
-=======
-// json = editor.get();
->>>>>>> a0716ec0eac9b291063d5a5f026ac2da9dc453fc
